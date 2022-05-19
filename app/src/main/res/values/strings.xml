@@ -1,0 +1,347 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">METAL GEAR SOLID Quiz Free</string>
+    <string name="app_name_profile">METAL GEAR SOLID Quiz Profile</string>
+    <string name="app_name_register">METAL GEAR SOLID Quiz \nregister</string>
+    <string name="aboutAdsReset">RESET SETTINGS</string>
+    <string name="aboutAdsResetTitle">Reset your settings for ads</string>
+    <string name="aboutAdsResetDesc">Tap on the text below to reset your settings for ads and to show the dialog for settings again.\n\nPlease note: this function requires an Internet connection.</string>
+    <string name="aboutBirthday"><b>Date of Birth</b></string>
+    <string name="aboutBirthdayDesc">This app is not subject to any age restrictions. So why this information? Hm&#8230; that is a good question! Maybe we should "experiment" with it to see what happens?
+        \nIt would still be nice if you enter at least your correct year of birth.</string>
+    <string name="aboutContact"><b>Contact</b></string>
+    <string name="aboutContactDesc">E-Mail:\t <u>dev.hq.smi@gmail.com</u>\nOr use the feedback menu in the main menu to generate an e-mail.</string>
+    <string name="aboutDeleteProfile"><b>Can I delete my profile?</b></string>
+    <string name="aboutDeleteProfileDesc">Yes, please send an e-mail to <u>dev.hq.smi@gmail.com</u>.
+        Please note you have to send the deletion request from the email address you are registered with in the app! After deleting your profile, your data cannot be restored.</string>
+    <string name="aboutEmail"><b>E-mail address</b></string>
+    <string name="aboutEmailDesc">Is needed to create a profile. This will allow your game data to be loaded if you uninstall the app and reinstall it later. You can also create a new password if you forget your current one.</string>
+    <string name="aboutPrivacyPolicy">Privacy Policy</string>
+    <string name="aboutPrivacyPolicyDesc">show privacy policy\n\ntap here</string>
+    <string name="aboutTitle">App FAQs</string>
+    <string name="aboutOther"><b>Other</b></string>
+    <string name="aboutOtherDesc">This app uses CountryCodePickerProject library released under the Apache 2.0 license.
+        \n
+        <u>https://github.com/hbb20/CountryCodePickerProject</u>
+        \n
+        <u>https://www.apache.org/licenses/LICENSE-2.0</u>
+        \n\nThis app is also featuring Music by Matthew Pablo
+        \nhttp://www.matthewpablo.com
+    </string>
+    <string name="aboutSupportApp">Support app development</string>
+    <string name="aboutSupportAppDesc">If you like the app, please consider buying a PRO version. For the small price you not only get an ad-free app, but you also support future development and online functionality.
+        \n\nPlease note: There are no additional features in the PRO version!\n\n</string>
+    <string name="aboutSupportAppLink"><u>Show Metal Gear Solid Quiz Pro</u></string>
+    <string name="aboutUsername"><b>Username</b></string>
+    <string name="aboutUsernameDesc">You will be listed in the ranking system under this name. This name is freely selectable and is visible for everyone as soon as you appear in the ranking system.
+        \nPlease note: Profiles with vulgar, offensive and / or right-wing extremist usernames will be deleted.</string>
+    <string name="aboutWhatDataStored"><b>What data is stored and for what purpose?</b></string>
+    <string name="aboutWhatDataStoredDesc">Username, email address, date of birth, country, gender, screen resolution, Android version and game data (e.g. scores in each category).
+        \n\n
+        User name, e-mail address, date of birth, country and gender are user entries and are not read from the device. So you can enter whatever you want.
+        \n\n
+        Country and gender are used for anonymous user statistics.
+        \n\n
+        Screen resolution and Android version is used to optimize the app for different screen sizes and Android versions.</string>
+    <string name="account_created_successfully">Account has been created successfully.</string>
+    <string name="birthday_date">Enter your birthday</string>
+    <string name="birthday_date_hint">your birthday</string>
+    <string name="birthdayUser">birthday:\t %1$s</string>
+    <string name="b0000">Happy birthday, %1$s!</string>
+    <string name="b0000_1">Oh, the big day is already tomorrow! :-)</string>
+    <string name="b0000_2">The countdown is running. There are just 2 days left!</string>
+    <string name="b0000_3">The countdown is running. There are just 3 days left!</string>
+    <string name="b0000_4">The countdown is running. There are just 4 days left!</string>
+    <string name="b0000_xx">This special day is %1$d days away!</string>
+    <string name="b3001na">Happy birthday, \"%1$s\"!</string>
+    <string name="b3001na_sh">o.O ??????</string>
+    <string name="b3001na_td">Is that you, MAN?</string>
+    <string name="b0602di">Happy birthday, %1$s!\nThose magic words will be missed.</string>
+    <string name="b0602di_sh">Snnnn.... no, not yet. %1$s So we have to wait a little bit longer.</string>
+    <string name="b0602di_td">Snaaaaaakeeeeee!</string>
+    <string name="b0508ei">Happy birthday, %1$s!\nDon\'t be silent today. :-)</string>
+    <string name="b0508ei_sh">Will that day be a quiet day?</string>
+    <string name="b0508ei_td">Don\'t worry about vocal cord parasites.</string>
+    <string name="b2408oe">Happy birthday, %1$s!\nThank you for all the good memories.</string>
+    <string name="b2408oe_sh">%1$s \nThen somebody also celebrates birthday who has given us a lot of joy.</string>
+    <string name="b2408oe_td">We all looking forward to this date, great master. :-)</string>
+    <string name="b2512ij">Happy birthday %1$s and have fun painting!</string>
+    <string name="b2512ij_sh">Will we see some cool pictures that day?</string>
+    <string name="b2512ij_td">Hope you like the style. :-)</string>
+    <string name="category">Category: %1$s</string>
+    <string name="categoryNormal">Normal</string>
+    <string name="categoryHard">Hard</string>
+    <string name="chooseCategory">choose a category</string>
+    <string name="comrade">comrade</string>
+    <string name="confirm">Confirm</string>
+    <string name="congratsScoreNewHighscore">
+        Congratulation &lt;br>&lt;b>%1$s&lt;/b>
+        &lt;br>You\'ve reached a new high score for a single &lt;b>%2$s&lt;/b> category on &lt;b>%3$s&lt;/b> difficulty!</string>
+    <string name="congratsScoreHighscoreAgain">
+        Congratulation &lt;br>&lt;b>%1$s&lt;/b>
+        &lt;br>You\'ve reached a max score for a single &lt;b>%2$s&lt;/b> category on &lt;b>%3$s&lt;/b> difficulty once again!
+        &lt;br><i>Is that you, Hideo?</i></string>
+    <string name="congratsScoreSameScore">
+        Congratulation &lt;br>&lt;b>%1$s&lt;/b>
+        &lt;br>You\'ve reached %2$d points for a single &lt;b>%3$s&lt;/b> category on &lt;b>%4$s&lt;/b> difficulty once again!
+        &lt;br>With a bit more training you can reach new high scores!</string>
+    <string name="congratsScoreLessScore">
+        Is there something wrong &lt;br>&lt;b>%1$s&lt;/b>?
+        &lt;br>You\'ve already shown that you can do better than this. Let\'s try again. Make
+        Hideo proud and show the whole world your true knowledge!</string>
+    <string name="congratsScoreGeneral">
+        Hm&#x2026; That was just to warm up. &lt;br>&lt;b>%1$s&lt;/b>
+        &lt;br>Let\'s try again and show everyone that you can do much better!</string>
+    <string name="conAbout">About</string>
+    <string name="conFAQ">FAQs</string>
+    <string name="conProfile">Profile</string>
+    <string name="conTellAFriend">Invite a friend</string>
+    <string name="conSendRequest">send a request</string>
+    <string name="conStartGame">Start New Quiz</string>
+    <string name="conStatistics">Statistics</string>
+    <string name="conWorld">World Rankings</string>
+    <string name="contactAdress" translatable="false">dev.hq.smi@gmail.com</string>
+    <string name="country">country:</string>
+    <string name="create_profile">Create profile</string>
+    <string name="defaultString" translatable="false">\?</string>
+    <string name="dialogYea">Yes</string>
+    <string name="dialogNo">Maybe later</string>
+    <string name="difficulty">Difficulty: %1$s</string>
+    <string name="difficultyHard">hard</string>
+    <string name="difficultyNormal">normal</string>
+    <string name="email_address_enter">Enter your email address:</string>
+    <string name="email_address_hint">your email address</string>
+    <string name="email">email:\t %1$s</string>
+    <string name="eu_consent_text">Dear user!\n\nWe use Google Admob to show ads. Ads support our work, and enable further development of this app. In line with the new European Data Protection Regulation (GDPR), we need your consent to serve ads tailored for you.</string>
+    <string name="eu_consent_question">Can your data be used to show ads tailored for you?</string>
+    <string name="eu_learn_more"><u>Learn how your data is used</u></string>
+    <string name="eu_consent_no">No, show ads that are irrelevant</string>
+    <string name="eu_google_partners">Google and its advertising partners:</string>
+    <string name="eu_consent_remove_ads">Buy ad-free app version</string>
+    <string name="eu_consent_yes">Yes, continue to show relevant ads</string>
+    <string name="eu_consent_change_setting">You can change this setting anytime in the \"About\" section.</string>
+    <string name="eu_thank_you">Thank you!</string>
+
+    T
+    <string name="faqsAvailableQLangs"><b>Available languages for questions</b></string>
+    <string name="faqsAvailableQLangsDesc">- English (available for all questions) \n
+        - German (available for all questions) \n
+        - Russian (available for all questions) \n
+        \nThe language of the questions can be changed in your Profile settings
+    </string>
+    <string name="faqsLockedSectionsLbl">Locked sections</string>
+    <string name="faqsLockedSections">After installing the app, some sections are locked. Locked sections are identified by the ???. With increasing score app functions will be unlocked bit by bit. Noticeable are scores at 90, 120 …</string>
+    <string name="faqsPoints"><b>Points</b></string>
+    <string name="faqsPointsDesc">For each correctly answered question you get 1 point. For fast answers there are extra points. For answers within 11 seconds on Normal difficulty level, you get 1.5 points for each
+        correctly answered question. Hard difficulty gives 2 points for each correct answer within 15 seconds.</string>
+    <string name="faqsTimePenalty"><b>Time penalty</b></string>
+    <string name="faqsTimePenaltyDesc">If questions are answered quite quickly, but incorrectly, then you get a time penalty of 10 seconds.</string>
+    <string name="faqsTitle">Game FAQs</string>
+    <string name="feedbackGenerateMail">generate E-Mail</string>
+    <string name="feedbackHeaderMessage">Thank you for sending feedback.\nPlease please describe your request as detailed as possible.</string>
+    <string name="feedbackMessage">Message:</string>
+    <string name="feedbackMessageAboutSystem">\n\n\n\n============== Please leave this text as it is! ==============\n\n%1$s</string>
+    <string name="feedbackMessageHint">your message</string>
+    <string name="feedbackSelectEmailApp">Please select your e-mail app</string>
+    <string name="feedbackSubject">Subject:</string>
+    <string name="gender">Gender:</string>
+    <string name="genderFemale">female</string>
+    <string name="genderMale">male</string>
+    <string name="genderM" translatable="false">m</string>
+    <string name="genderW" translatable="false">w</string>
+    <string name="genderUser">gender:\t %1$s</string>
+    <string name="logIn">Log in</string>
+    <string name="mainMenu">main menu</string>
+    <string name="mainMenuBack">back to main menu</string>
+    <string name="metal_gear_solid_1">Metal Gear Solid 1</string>
+    <string name="metal_gear_solid_2">Metal Gear Solid 2</string>
+    <string name="metal_gear_solid_3">Metal Gear Solid 3</string>
+    <string name="metal_gear_solid_4">Metal Gear Solid 4</string>
+    <string name="metal_gear_solid_5">Metal Gear Solid 5</string>
+    <string name="metal_gear_solid_expert">Expert Quiz</string>
+    <string name="ok" translatable="false">ok</string>
+    <string name="password_create">Enter your password (> 6 characters!):</string>
+    <string name="password">Enter your password:</string>
+    <string name="password_hint">your password</string>
+    <string name="playAgain">play again</string>
+    <string name="passwordForgot">Forgot your password?\nTap here to reset your password.</string>
+    <string name="passwordForgotDesc"><b>Have you forgot your password?</b>\n\nPlease enter your e-mail address and tap on the button reset password.</string>
+    <string name="passwordForgotDialogDesc">You received an e-mail to %1$s. Please follow the instructions in the e-mail to reset your password.
+                        \n\nAfter pressing ok button you will be redirected to the log in screen.</string>
+    <string name="passwordReset">reset password</string>
+    <string name="questionsAnswered">Questions answered:</string>
+    <string name="questionsAnsweredNumber" translatable="false">%1$d / %2$d</string>
+    <string name="questionsCount">Question %1$s / %2$s</string>
+    <string name="questionLangEN">English (EN)</string>
+    <string name="questionLangDE">German (DE)</string>
+    <string name="questionLangRU">Russian (RU)</string>
+    <string name="questionsLanguage">Questionslanguage:</string>
+    <string name="rate_app">Rate App</string>
+    <string name="rate_title">Rate this app</string>
+    <string name="rate_message">If you enjoy playing MGS Quiz, would you mind taking a moment to rate it? \nThanks for your support!</string>
+    <string name="rate_ok">Sure</string>
+    <string name="rate_cancel">Remind Me Later</string>
+    <string name="rate_no">No, don\'t ask again</string>
+    <string name="registration">Don\'t have an account yet? Tap here to register.</string>
+    <string name="score">Score: </string>
+    <string name="scoreAktuelleZeit">quiz duration:</string>
+    <string name="scoreBestzeit">Your best time:</string>
+    <string name="scoreBestzeitNo">no best time yet</string>
+    <string name="scoreCurrent">Your current score:</string>
+    <string name="scoreHighest">Your highest score:</string>
+    <string name="scoreOverall">Your overall score:</string>
+    <string name="scoreNo">no score yet</string>
+    <string name="scoreTotal">Your total score:</string>
+    <string name="scoreCorrectAnswersCurrent">Correct answers in a row (current Quiz):</string>
+    <string name="scoreCorrectAnswersRecord">Correct answers in a row (all time record):</string>
+    <string name="scorePoints">%1$s points</string>
+    <string name="scoreTime">%1$d min. %2$d sec.</string>
+    <string name="shareApp">Have you already tried the MGS Quiz App from android PlayStore?</string>
+    <string name="shareAppDialog">Would you like to tell your friend about the app?</string>
+    <string name="shareAppTitle">&lt;font color=#FF7F27>Tell your friend about the app&lt;/font></string>
+    <string name="shareAppWithUsername">Have you already tried the MGS Quiz App from android PlayStore?\nMy username is %1$s</string>
+    <string name="shareCancel">@android:string/cancel</string>
+    <string name="shareTitle">&lt;font color=#FF7F27>What would you like to share? &lt;/font></string>
+    <string name="shareScoreOverallNew">I have reached a new overall score of %1$d points in MGS Quiz App!</string>
+    <string name="shareScoreTotalNew">I have reached a new total score of %1$d points for %2$s Quiz on %3$s difficulty in MGS Quiz App!</string>
+    <string name="shareScoreTotal">I have reached a total score of %1$d points for %2$s Quiz on %3$s difficulty in MGS Quiz App!</string>
+    <string name="shareScoreOverall">I have reached an overall score of %1$d points in MGS Quiz App!</string>
+    <string name="shareQuestionsAnsweredTotal">I have answered %1$d question in MGS Quiz App!</string>
+    <string name="shareSelectApp">Select an app</string>
+    <string name="showStatistics">show statistics</string>
+    <string name="showStats">show stats</string>
+    <string name="statsAnswers">%1$s answers</string>
+    <string name="statsMGS1n">MGS 1 Normal</string>
+    <string name="statsMGS1h">MGS 1 Hard</string>
+    <string name="statsMGS2n">MGS 2 Normal</string>
+    <string name="statsMGS2h">MGS 2 Hard</string>
+    <string name="statsMGS3n">MGS 3 Normal</string>
+    <string name="statsMGS3h">MGS 3 Hard</string>
+    <string name="statsMGS4n">MGS 4 Normal</string>
+    <string name="statsMGS4h">MGS 4 Hard</string>
+    <string name="statsMGS5n">MGS 5 Normal</string>
+    <string name="statsMGS5h">MGS 5 Hard</string>
+    <string name="statsQuestions">%1$s questions</string>
+    <string name="statsQTotal">Questions total:</string>
+    <string name="statsQAnswered">Questions answered:</string>
+    <string name="statsQAnsweredRate">Correct answer rate:</string>
+    <string name="statsExpertCorrectAnswersA">Expert Quiz - Correct answers in a row on normal difficulty:</string>
+    <string name="statsExpertCorrectAnswersD">Expert Quiz - Correct answers in a row on hard difficulty:</string>
+    <string name="statsExpertTotalScoreA">Expert Quiz - Total score normal difficulty:</string>
+    <string name="statsExpertTotalScoreD">Expert Quiz - Total score hard difficulty:</string>
+    <string name="statsScoreOverall">Overall score:</string>
+    <string name="tabHighest">Highest Score</string>
+    <string name="tabDuration">Quiz duration</string>
+    <string name="tabTotal">Total Score</string>
+    <string name="tabOthers">Others</string>
+    <string name="tabWorldAnsweredQuestions">Answered Questions</string>
+    <string name="tabWorldExpertScoreA">Expert Quiz normal</string>
+    <string name="tabWorldExpertScoreD">Expert Quiz hard</string>
+    <string name="tabWorldOverallScore">Overall score</string>
+    <string name="tagHard" translatable="false">Hard</string>
+    <string name="tagNormal" translatable="false">Normal</string>
+    <string name="tagMGS1" translatable="false">MGS 1</string>
+    <string name="tagMGS2" translatable="false">MGS 2</string>
+    <string name="tagMGS3" translatable="false">MGS 3</string>
+    <string name="tagMGS4" translatable="false">MGS 4</string>
+    <string name="tagMGS5" translatable="false">MGS 5</string>
+    <string name="tagExpert" translatable="false">all</string>
+    <string name="timerDefault" translatable="false">00:30</string>
+    <string name="unknown1" translatable="false">\?</string>
+    <string name="unknown2" translatable="false">\??</string>
+    <string name="unknown3" translatable="false">\???</string>
+    <string name="unknownComrade">unknown comrade</string>
+    <string name="updateProfile">update profile</string>
+    <string name="updateSuccessfully">Your data has been updated.</string>
+    <string name="username">Enter your username (> 4 characters!):</string>
+    <string name="username_hint">your username</string>
+    <string name="userprofilePlayMusic">Play music</string>
+    <string name="userprofileSelectQLang">Choose a language for questions</string>
+    <string name="welcome">Welcome %1$s</string>
+    <string name="welcomeDefUser">welcome unknown comrade</string>
+    <string name="whyRegister">Why should I register?</string>
+    <string name="whyRegisterInfo">
+        <b>Why should I register?</b>\nYour Registration will enable the app to save your progress online. You will be included in a ranking system
+        and will be able to show all of your expert knowledge of MGS universe to anyone in the world by storming
+        into first place in the respective categories. You will also see the top players of some categories.
+        \nAre you ready to face the challenge and show everyone your class? :-)
+        \n\n
+        <b>Is the registration free?</b>\n
+        YES!\n\nYour e-mail address will not be used to send you any unsolicited e-mails!
+    </string>
+    <string name="eBirthdayTooRecent">Please select a date further in the past!</string>
+    <string name="eBirthdayTooOld">Please select a date further in the future!</string>
+    <string name="eCategory">Category and / or difficulty could not be selected</string>
+    <string name="eDefault">Something went wrong. If you keep getting this error, please report it to the developer.\nThank you!</string>
+    <string name="eGeneral">Error: please check your input!</string>
+
+    <string name="eMailAddressAlreadyInUse">This email address is already in use. Please use another email address.</string>
+    <string name="eMailAddressInvalid">email address is invalid!</string>
+    <string name="eMailAddressNoRecord">There is no such e-mail address in the database. Please check your input.</string>
+    <string name="eMailWithInvalidChar">email address begins with an invalid character!</string>
+    <string name="eGenderSelection">Please select your gender!</string>
+    <string name="eInputRequired">Input required!</string>
+    <string name="eInputRequiredFeedback">Please select a subject and / or describe your request!</string>
+    <string name="eNoEmailApp">No e-mail app founded on your device!</string>
+    <string name="ePasswordToShort">password should contain at least 7 characters!</string>
+    <string name="ePasswordToLong">password is too long!</string>
+    <string name="eQuestions">There are no questions available. \nIf you think this is an error, please contact the developer.</string>
+    <string name="eRetrievingData">Something went wrong while loading your data. Please try again later.</string>
+    <string name="eSelectCountry">Please select your country!</string>
+    <string name="eSelectOption">Please select an option first!</string>
+    <string name="eServerConnection">Connection to server failed.</string>
+    <string name="eShowErrorAds">unable to show ads</string>
+    <string name="eUsernameInUse">Username already in use. \nPlease choose another username or keep the suggested one!</string>
+    <string name="eUsernamePassword">Invalid email or password. Please check your input.</string>
+    <string name="eUsernameTooShort">Username should contain at least 5 characters!</string>
+    <string name="eUsernameTooLong">Username can\'t be longer than 25 characters!</string>
+    <string name="cDescTrophy">a golden cup trophy</string>
+    <string name="eDescTrophySad">a sad looking smiley</string>
+    <string name="descBirthdayCake">A tasty looking cupcake</string>
+    <string name="title_activity_score">ScoreActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_stats">StatsActivity</string>
+
+    <string-array name="feedback_subjects">
+        <item>select a subject</item>
+        <item>Bug-Report</item>
+        <item>Feature-Request</item>
+        <item>typo / translation error</item>
+        <item>Other request</item>
+    </string-array>
+    <string-array name="questions_lang">
+        <item>@string/questionLangEN</item>
+        <item>@string/questionLangDE</item>
+        <item>@string/questionLangRU</item>
+    </string-array>
+    <string-array name="shareAppWithFriendChooser">
+        <item>share also your username</item>
+        <item>don\'t share your username</item>
+    </string-array>
+    <string-array name="shareScoreNew">
+        <item>your new total score for current quiz category</item>
+        <item>your new overall score</item>
+    </string-array>
+    <string-array name="shareScore">
+        <item>number of total answered questions</item>
+        <item>my overall score</item>
+        <item>MGS 1 score for normal difficulty</item>
+        <item>MGS 1 score for hard difficulty</item>
+        <item>MGS 2 score for normal difficulty</item>
+        <item>MGS 2 score for hard difficulty</item>
+        <item>MGS 3 score for normal difficulty</item>
+        <item>MGS 3 score for hard difficulty</item>
+        <item>MGS 4 score for normal difficulty</item>
+        <item>MGS 4 score for hard difficulty</item>
+        <item>MGS 5 score for normal difficulty</item>
+        <item>MGS 5 score for hard difficulty</item>
+    </string-array>
+
+    <string name="ad_app_main" translatable="false">ca-app-pub-9109965128312930~1465544893</string>
+    <string name="ad_overview_bottom" translatable="false">ca-app-pub-9109965128312930/9206990466</string>
+    <string name="ad_quiz_bottom" translatable="false">ca-app-pub-9109965128312930/9816928154</string>
+    <string name="ad_score_top" translatable="false">ca-app-pub-9109965128312930/1867475314</string>
+    <string name="ad_stats_bottom" translatable="false">ca-app-pub-9109965128312930/8353002355</string>
+    <string name="ad_world_bottom" translatable="false">ca-app-pub-9109965128312930/5831605206</string>
+
+
+</resources>

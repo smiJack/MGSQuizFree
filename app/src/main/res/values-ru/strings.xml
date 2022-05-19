@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aboutAdsReset">Сбросить настройки</string>
+    <string name="aboutAdsResetTitle">Изменить настройки для рекламных объявлений</string>
+    <string name="aboutAdsResetDesc">Нажмите на текст ниже, чтобы сбросить настройки объявления и вернуться в диалоговое окно Ad Settings (Настройки рекламы).\n\nОбратите внимание: для этой функции необходимо соединение с Интернетом.</string>
+    <string name="app_name_profile">METAL GEAR SOLID Quiz Профиль</string>
+    <string name="app_name_register">METAL GEAR SOLID Quiz\nрегистрация</string>
+    <string name="aboutBirthday"><b>Дата рождения</b></string>
+    <string name="aboutBirthdayDesc">Это приложение не подвержено никаким возрастным ограничениям. Так почему же эта информация? Хм&#8230; это хороший вопрос! Может быть, нам стоит "поэкспериментировать" с ней, чтобы посмотреть, что произойдет?\n
+        Все равно было бы неплохо, если бы вы указали хотя бы правильный год рождения.</string>
+    <string name="aboutContact"><b>Контактная информация</b></string>
+    <string name="aboutContactDesc">Электронная почта:\t <u>dev.hq.smi@gmail.com</u>\nИли лучше всего воспользуйтесь формой обратной связи в главном меню для создания электронного письма.</string>
+    <string name="aboutDeleteProfile"><b>Могу я удалить свой профиль?</b></string>
+    <string name="aboutDeleteProfileDesc">Да, пожалуйста, отправьте электронное письмо на <u>dev.hq.smi@gmail.com</u>.
+        Пожалуйста, обратите внимание, что вы должны отправить запрос на удаление с адреса электронной почты, с которым вы зарегистрированы в приложении! После удаления вашего профиля ваши данные не могут быть восстановлены.</string>
+    <string name="aboutEmail"><b>адрес электронной почты</b></string>
+    <string name="aboutEmailDesc">Необходимо чтобы создать профиль. Это позволит загрузить игровые данные, если вы удалите приложение и переустановите его позже. Вы также можете создать новый пароль, если забудете текущий.</string>
+    <string name="aboutPrivacyPolicy">Правила защиты персональных данных</string>
+    <string name="aboutPrivacyPolicyDesc">Показать информацию о правилах защиты персональных данных (на английском языке)\n\nнажмите сюда</string>
+    <string name="aboutTitle">Часто задаваемые вопросы по приложениям</string>
+    <string name="aboutOther"><b>Другое</b></string>
+    <string name="aboutOtherDesc">Это приложение использует библиотеку CountryCodePickerProject, выпущенную под лицензией Apache 2.0.
+        \n
+        <u>https://github.com/hbb20/CountryCodePickerProject</u>
+        \n
+        <u>https://www.apache.org/licenses/LICENSE-2.0</u>
+        \n\nЭто приложение также включает музыку от Мэтью Пабло.
+        \nhttp://www.matthewpablo.com
+    </string>
+    <string name="aboutSupportApp">Поддержка разработки приложения</string>
+    <string name="aboutSupportAppDesc">Если вам нравится приложение, пожалуйста, подумайте о покупке PRO-версии. За небольшую цену вы получите не только приложение без рекламы, но и поддерживаете будущие разработки и онлайн функции.
+        \n\nПожалуйста, обратите внимание: В PRO-версии нет дополнительных функций!\n\n</string>
+    <string name="aboutSupportAppLink"><u>Показать Metal Gear Solid Quiz Pro</u></string>
+    <string name="aboutUsername"><b>Имя пользователя</b></string>
+    <string name="aboutUsernameDesc">Вы будете включены в рейтинговую систему под этим именем. Это имя свободно выбирается и будет видно всем, как только вы окажетесь в рейтинге.
+        \nОбратите внимание: Профили с вульгарными, оскорбительными и/или правоэкстремистскими именами пользователей будут удалены.</string>
+    <string name="aboutWhatDataStored"><b>Какие данные хранятся и с какой целью?</b></string>
+    <string name="aboutWhatDataStoredDesc">Имя пользователя, адрес электронной почты, дата рождения, страна, пол, экранное разрешение, версия Android и данные об игре (например, очки в каждой категории).
+        \n\n
+        Имя пользователя, адрес электронной почты, дата рождения, страна и пол являются записями пользователя и не считываются с устройства. Таким образом, вы можете вводить все, что захотите.
+        \n\n
+        Страна и пол используются для анонимной статистики пользователей.
+        \n\n
+        Разрешение экрана и версия Android используется для оптимизации приложения для различных размеров экрана и версий Android.</string>
+    <string name="account_created_successfully">Аккаунт успешно создан.</string>
+    <string name="birthday_date">Введи свой день рождения</string>
+    <string name="birthday_date_hint">свой день рождения</string>
+    <string name="birthdayUser">день рождения:\t %1$s</string>
+    <string name="b0000">С днём рождения, %1$s!</string>
+    <string name="b0000_1">О, этот важный день уже завтра! :-)</string>
+    <string name="b0000_2">Время идет. Осталось всего 2 дня!</string>
+    <string name="b0000_3">Время идет. Осталось всего 3 дня!</string>
+    <string name="b0000_4">Время идет. Осталось всего 4 дня!</string>
+    <string name="b0000_xx">До этого особенного дня осталось %1$d дней!</string>
+    <string name="b3001na">С днём рождения, \"%1$s\"!</string>
+    <string name="b3001na_sh">o.O ????????</string>
+    <string name="b3001na_td">Это ты, Мэн?</string>
+    <string name="b0602di">С днём рождения, %1$s!\nНам будет не хватать этих волшебных слов.</string>
+    <string name="b0602di_sh">Снннн.... нет, пока нет. %1$s Так что придется подождать еще немного.</string>
+    <string name="b0602di_td">Снааааааaaaайк!</string>
+    <string name="b0508ei">С днём рождения, %1$s!\nНе смей молчать сегодня. :-)</string>
+    <string name="b0508ei_sh">Будет ли это тихий день?</string>
+    <string name="b0508ei_td">Не волнуйся о паразитах на голосовых связках.</string>
+    <string name="b2408oe">С днем рождения, %1$s!\nСпасибо за все хорошие воспоминания.</string>
+    <string name="b2408oe_sh">%1$s \nТогда кто-то тоже празднует день рождения, кто подарил нам много радости.</string>
+    <string name="b2408oe_td">Мы все с нетерпением ждем этой даты, великий мастер. :-)</string>
+    <string name="b2512ij">С днем рождения %1$s и надеемся, что ты продолжишь получать удовольствие от рисования!</string>
+    <string name="b2512ij_sh">Мы увидим какие-нибудь классные рисунки в тот день?</string>
+    <string name="b2512ij_td">Надеюсь, тебе понравится этот стиль. :-)</string>
+    <string name="category">Категория: %1$s</string>
+    <string name="categoryNormal">нормальноя</string>
+    <string name="categoryHard">тяжелоя</string>
+    <string name="chooseCategory">выбери категорию</string>
+    <string name="comrade">товарищ</string>
+    <string name="confirm">подтвердить</string>
+    <string name="congratsScoreNewHighscore">
+        Oтлично &lt;br>&lt;b>%1$s&lt;/b>
+        &lt;br>Новый рекорд был установлен в категории &lt;b>%2$s&lt;/b> на &lt;b>%3$s&lt;/b> уровне сложности!</string>
+    <string name="congratsScoreHighscoreAgain">
+        Oтлично &lt;br>&lt;b>%1$s&lt;/b>
+        &lt;br>Снова было набрато максимальное количество очков за одну категорию &lt;b>%2$s&lt;/b> на &lt;b>%3$s&lt;/b> уровне сложности!
+        &lt;br><i>Это ты, Хидео?</i></string>
+    <string name="congratsScoreSameScore">
+        Oтлично &lt;br>&lt;b>%1$s&lt;/b>
+        &lt;br>Снова были набраны %2$d очков в категории &lt;b>%3$s&lt;/b> на &lt;b>%4$s&lt;/b> уровне сложности!
+        &lt;br>С немного больше тренировокой ты сможеш достичь новых рекордов!</string>
+    <string name="congratsScoreLessScore">
+        &lt;br>&lt;b>%1$s&lt;/b> что-то не так?
+        &lt;br>Вы уже показали, что знаете больше. Попробуй еще раз. Покажите всему миру свои истинные знания и пусть Хидео гордится тобой!</string>
+    <string name="congratsScoreGeneral">
+        Хм&#x2026; Это было просто, чтобы согреться. &lt;br>&lt;b>%1$s&lt;/b>
+        &lt;br>Попробуй еще раз и покажи всем, что ты знаеш гораздо больше!</string>
+    <string name="conAbout">О приложении</string>
+    <string name="conFAQ">Ч. З. Вопросы</string>
+    <string name="conProfile">Профиль</string>
+    <string name="conTellAFriend">Пригласить друга</string>
+    <string name="conSendRequest">Отправить запрос</string>
+    <string name="conStartGame">Начать новую игру</string>
+    <string name="conStatistics">Статистика</string>
+    <string name="conWorld">Мировые рейтинги</string>
+    <string name="country">страна:</string>
+    <string name="create_profile">Создать профиль</string>
+    <string name="dialogYea">Да</string>
+    <string name="dialogNo">Возможно, позже</string>
+    <string name="difficulty">Сложность: %1$s</string>
+    <string name="difficultyHard">тяжелом</string>
+    <string name="difficultyNormal">нормальном</string>
+    <string name="email_address_enter">Введи свой адрес электронной почты:</string>
+    <string name="email_address_hint">свой эмаль</string>
+    <string name="email">электр. почта:\t %1$s</string>
+    <string name="eu_consent_text">Мы заботимся о вашей конфиденциальности и безопасности ваших данных. Чтобы это приложение оставалось бесплатным, мы должны размещать рекламу.</string>
+    <string name="eu_consent_question">Вы согласны, чтобы наши партнеры продолжали использовать ваши данные для показа рекламы по вашим интересам?</string>
+    <string name="eu_learn_more"><u>Узнайте больше о сборе и использовании данных.</u></string>
+    <string name="eu_consent_no">Нет, я хочу видеть менее релевантную рекламу</string>
+    <string name="eu_google_partners">Google и его партнеры по рекламе:</string>
+    <string name="eu_consent_remove_ads">Купить версию без рекламы</string>
+    <string name="eu_consent_yes">Да, я хочу по-прежнему видеть релевантную рекламу</string>
+    <string name="eu_consent_change_setting">Вы можете изменить свой выбор в любое время в разделе \"О приложении\".</string>
+    <string name="eu_thank_you">Большое спасибо за поддержку!</string>
+    <string name="faqsAvailableQLangs"><b>Доступные языки для вопросов</b></string>
+    <string name="faqsAvailableQLangsDesc">- Английский - EN (доступен для всех вопросов) \n
+        - Немецкий - DE (доступен для всех вопросов) \n
+        - Русский - RU (доступен для всех вопросов) \n
+        \nЯзык вопросов можно изменить в настройках профиля.
+    </string>
+    <string name="faqsLockedSectionsLbl">Закрытые разделы</string>
+    <string name="faqsLockedSections">После установки приложения некоторые секции заблокированы. Заблокированные секции идентифицируются с помощью ???. С повышением очков функции приложения будут постепенно открываться. Обратите внимание на очки 90, 120…</string>
+    <string name="faqsPoints"><b>Очки</b></string>
+    <string name="faqsPointsDesc">За каждый правильный ответ на вопрос вы получаете 1 очко. За быстрые ответы начисляются дополнительные очки. За ответы в течение 11 секунд на нормальном уровне сложности вы получаете 1,5 очка за каждый правильный ответ на вопрос.
+        Трудный уровень сложности дает 2 очка за каждый правильный ответ в течение 15 секунд.</string>
+    <string name="faqsTimePenalty"><b>Штраф времени</b></string>
+    <string name="faqsTimePenaltyDesc">Если на вопросы отвечают достаточно быстро, но неправильно, тогда вы получаете штраф по времени в 10 секунд.</string>
+    <string name="faqsTitle">Часто задаваемые вопросы об игре</string>
+    <string name="feedbackGenerateMail">создать электронную почту</string>
+    <string name="feedbackHeaderMessage">Спасибо за отправку отзыва.\nПожалуйста, опишите ваш запрос как можно более подробно.</string>
+    <string name="feedbackMessage">Сообщение:</string>
+    <string name="feedbackMessageAboutSystem">\n\n\n\n============== Пожалуйста, оставьте этот текст таким, какой он есть! ==============\n\n%1$s</string>
+    <string name="feedbackMessageHint">твое сообщение</string>
+    <string name="feedbackSelectEmailApp">Пожалуйста, выберите ваше приложение по электронной почте</string>
+    <string name="feedbackSubject">Тема:</string>
+    <string-array name="feedback_subjects">
+        <item>выберите тему</item>
+        <item>Сообщение об ошибке</item>
+        <item>Запрос Функции</item>
+        <item>опечатка / ошибка в переводе</item>
+        <item>Прочий запрос</item>
+    </string-array>
+    <string name="gender">Пол:</string>
+    <string name="genderFemale">женский</string>
+    <string name="genderMale">мужской</string>
+    <string name="genderUser">Пол:\t %1$s</string>
+    <string name="logIn">войти</string>
+    <string name="mainMenu">главное меню</string>
+    <string name="mainMenuBack">вернуться в главное меню</string>
+    <string name="metal_gear_solid_1">Metal Gear Solid 1</string>
+    <string name="metal_gear_solid_2">Metal Gear Solid 2</string>
+    <string name="metal_gear_solid_3">Metal Gear Solid 3</string>
+    <string name="metal_gear_solid_4">Metal Gear Solid 4</string>
+    <string name="metal_gear_solid_5">Metal Gear Solid 5</string>
+    <string name="metal_gear_solid_expert">Эксперт Викторина</string>
+    <string name="password_create">Введи свой пароль (> 6 символов!):</string>
+    <string name="password">Введи свой пароль:</string>
+    <string name="password_hint">свой пароль</string>
+    <string name="playAgain">играть снова</string>
+    <string name="passwordForgot">Забыли пароль?\nНажмите сюда, чтобы сменить пароль.</string>
+    <string name="passwordForgotDesc"><b>Забыли свой пароль?</b>\n\nПожалуйста, введите свой адрес электронной почты и нажмите на кнопку <i>сменить пароль</i>.</string>
+    <string name="passwordForgotDialogDesc">Вы получили письмо на адрес %1$s. Пожалуйста, следуйте инструкциям в электронном письме, чтобы изменить пароль.
+                        \n\nПосле нажатия кнопки ok Вы будете перенаправлены на экран входа в игру.</string>
+    <string name="passwordReset">сменить пароль</string>
+    <string name="questionsAnswered">Вопросовы отвечены:</string>
+    <string name="questionsCount">Вопросовы отвечены %1$s / %2$s</string>
+    <string-array name="questions_lang">
+        <item>@string/questionLangEN</item>
+        <item>@string/questionLangDE</item>
+        <item>@string/questionLangRU</item>
+    </string-array>
+    <string name="questionLangEN">Английский (EN)</string>
+    <string name="questionLangDE">Немецкий (DE)</string>
+    <string name="questionLangRU">Русский (RU)</string>
+    <string name="questionsLanguage">Язык вопросов:</string>
+    <string name="rate_app">Оценить приложения</string>
+    <string name="rate_title">Оцените это приложение</string>
+    <string name="rate_message">Если вам нравится играть в викторину MGS, не могли бы вы воспользоваться моментом, чтобы оценить его? \nСпасибо за поддержку!</string>
+    <string name="rate_ok">Конечно</string>
+    <string name="rate_cancel">Напомни мне позже</string>
+    <string name="rate_no">Нет, больше не спрашивать</string>
+    <string name="registration">У вас еще нет аккаунта? Нажмите сюда, чтобы зарегистрироваться.</string>
+    <string name="score">Очкн: </string>
+    <string name="scoreAktuelleZeit">длительность викторины:</string>
+    <string name="scoreBestzeit">Твое лучшее время:</string>
+    <string name="scoreBestzeitNo">пока нет лучшего времени</string>
+    <string name="scoreCurrent">Твой нынешний счет:</string>
+    <string name="scoreHighest">Самый высокий счет:</string>
+    <string name="scoreOverall">Общий счет:</string>
+    <string name="scoreNo">пока нет очков</string>
+    <string name="scoreTotal">итоговый счет:</string>
+    <string name="scoreCorrectAnswersCurrent">Подряд правильные ответы (текущий тест):</string>
+    <string name="scoreCorrectAnswersRecord">Подряд правильные ответы (Рекорд):</string>
+    <string name="scorePoints">%1$s очков</string>
+    <string name="scoreTime">%1$d мин. %2$d сек.</string>
+    <string name="shareApp">Вы уже пробовали викторину Metal Gear Solid из android PlayStore?</string>
+    <string name="shareAppDialog">Хочешь рассказать своему другу / своей подруге об этом приложении?</string>
+    <string name="shareAppTitle">&lt;font color=#FF7F27>Расскажи своему другу о приложении&lt;/font></string>
+    <string name="shareAppWithUsername">Вы уже пробовали викторину Metal Gear Solid из android PlayStore?\nМой псевдоним %1$s</string>
+    <string-array name="shareAppWithFriendChooser">
+        <item>сообщить также свой псевдоним</item>
+        <item>не делиться своим псевдонимом</item>
+    </string-array>
+    <string name="shareCancel">@android:string/cancel</string>
+    <string name="shareTitle">&lt;font color=#FF7F27>Чем вы хотите поделиться?&lt;/font></string>
+    <string-array name="shareScoreNew">
+        <item>ваш новый общий итог за текущую категорию викторины</item>
+        <item>ваш новый общий счёт</item>
+    </string-array>
+    <string name="shareScoreOverallNew">Я достиг нового общего результата в %1$d очков в викторине Metal Gear Solid!</string>
+    <string name="shareScoreTotalNew">Я достиг нового общего результата в %1$d очков для викторины %2$s на %3$s уровне сложности в викторине Metal Gear Solid!</string>
+    <string-array name="shareScore">
+        <item>количество отвеченных вопросов</item>
+        <item>мои общии очки</item>
+        <item>Очки MGS 1 на нормальной сложности</item>
+        <item>Очки MGS 1 на тяжелой сложности</item>
+        <item>Очки MGS 2 на нормальной сложности</item>
+        <item>Очки MGS 2 на тяжелой сложности</item>
+        <item>Очки MGS 3 на нормальной сложности</item>
+        <item>Очки MGS 3 на тяжелой сложности</item>
+        <item>Очки MGS 4 на нормальной сложности</item>
+        <item>Очки MGS 4 на тяжелой сложности</item>
+        <item>Очки MGS 5 на нормальной сложности</item>
+        <item>Очки MGS 5 на тяжелой сложности</item>
+    </string-array>
+    <string name="shareScoreTotal">Я достиг общего результата в %1$d очков для викторины %2$s на %3$s уровне сложности в викторине Metal Gear Solid!</string>
+    <string name="shareScoreOverall">Я достиг общего результата в %1$d очков в викторине Metal Gear Solid!</string>
+    <string name="shareQuestionsAnsweredTotal">Я ответил на %1$d вопрос в викторине Metal Gear Solid!</string>
+    <string name="shareSelectApp">Выберите приложение</string>
+    <string name="showStatistics">показать статистику</string>
+    <string name="showStats">показать статистику</string>
+    <string name="statsAnswers">%1$s ответов</string>
+    <string name="statsMGS1n">MGS 1 нормальная сложность</string>
+    <string name="statsMGS1h">MGS 1 тяжелaя сложность</string>
+    <string name="statsMGS2n">MGS 2 нормальная сложность</string>
+    <string name="statsMGS2h">MGS 2 тяжелaя сложность</string>
+    <string name="statsMGS3n">MGS 3 нормальная сложность</string>
+    <string name="statsMGS3h">MGS 3 тяжелaя сложность</string>
+    <string name="statsMGS4n">MGS 4 нормальная сложность</string>
+    <string name="statsMGS4h">MGS 4 тяжелaя сложность</string>
+    <string name="statsMGS5n">MGS 5 нормальная сложность</string>
+    <string name="statsMGS5h">MGS 5 тяжелaя сложность</string>
+    <string name="statsQuestions">%1$s вопросов</string>
+    <string name="statsQTotal">Всего вопросов:</string>
+    <string name="statsQAnswered">Правелные ответы:</string>
+    <string name="statsQAnsweredRate">Процент правильных ответов:</string>
+    <string name="statsExpertCorrectAnswersA">Экспертная викторина - Правильные ответы подряд на нормальной сложности:</string>
+    <string name="statsExpertCorrectAnswersD">Экспертная викторина - Правильные ответы подряд на тяжелой сложности:</string>
+    <string name="statsExpertTotalScoreA">Экспертная викторина - Общий счет на нормальной сложности:</string>
+    <string name="statsExpertTotalScoreD">Экспертная викторина - Общий счет на тяжелой сложности:</string>
+    <string name="statsScoreOverall">Общий счет:</string>
+    <string name="tabHighest">высший счет</string>
+    <string name="tabDuration">Длительность Викторин</string>
+    <string name="tabTotal">итоговые счета</string>
+    <string name="tabOthers">Остальные</string>
+    <string name="tabWorldAnsweredQuestions">Отвеченные вопросы</string>
+    <string name="tabWorldExpertScoreA">Экспертная викторина нормальноя сложность</string>
+    <string name="tabWorldExpertScoreD">Экспертная викторина тяжелоя сложность</string>
+    <string name="tabWorldOverallScore">Общий счет</string>
+    <string name="unknownComrade">неизвестный товарищ</string>
+    <string name="updateProfile">актуализировать профиль</string>
+    <string name="updateSuccessfully">Ваши данные были актуализированы.</string>
+    <string name="username">Введи своё имя пользователя (> 4 символа!):</string>
+    <string name="username_hint">своё имя пользователя</string>
+    <string name="userprofilePlayMusic">играть музыку</string>
+    <string name="userprofileSelectQLang">Выберите язык для вопросов</string>
+    <string name="welcome">Добро пожаловать, %1$s</string>
+    <string name="welcomeDefUser">Добро пожаловать, неизвестный товарищ</string>
+    <string name="whyRegister">Зачем мне регистрироваться?</string>
+    <string name="whyRegisterInfo">
+        <b>Зачем мне регистрироваться?</b>\nВаша Регистрация позволит приложению сохранять ваши успехи онлайн. Вы будете включены в систему рейтингов и сможете показать все свои экспертные знания во вселенной Metal Gear Solid любому в мире, поднявшись на первое место в соответствующих категориях. Вы также увидите лучших игроков некоторых категорий.
+        \nГотовы ли вы принять вызов и показать всем свой класс? :-)
+        \n\n
+        <b>Является регистрация бесплатной?</b>\n
+        ДА!\n\nВаш адрес электронной почты не будет использоваться для отправки нежелательных электронных писем!
+    </string>
+
+    <string name="eBirthdayTooRecent">Пожалуйста, выберите дату далее в прошлом!</string>
+    <string name="eBirthdayTooOld">Пожалуйста, выберите дату далее в будущем!</string>
+    <string name="eCategory">Категория и / или сложность не может быть выбрана</string>
+    <string name="eDefault">Что-то пошло не так. Если вы продолжаете получать эту ошибку, сообщите об этом разработчику.\nСпасибо!</string>
+    <string name="eGeneral">Ошибка: пожалуйста, проверьте свой ввод!</string>
+    <string name="eMailAddressAlreadyInUse">Этот э-майл адрес уже используется. Пожалуйста, используйте другой адрес электронной почты.</string>
+    <string name="eMailAddressInvalid">э-майл адрес недействителен!</string>
+    <string name="eMailAddressNoRecord">В базе данных нет такого адреса электронной почты. Пожалуйста, проверьте свой ввод.</string>
+    <string name="eMailWithInvalidChar">э-майл начинается с неправильного символа!</string>
+    <string name="eGenderSelection">Пожалуйста, выберите свой пол!</string>
+    <string name="eInputRequired">Требуется ввод!</string>
+    <string name="eInputRequiredFeedback">Пожалуйста, выберите тему и/или опишите свой запрос!</string>
+    <string name="eNoEmailApp">На вашем смартфоне / планшете не найденa программа для работы с электронной почтой!</string>
+    <string name="ePasswordToShort">пароль должен содержать не менее 7 символов!</string>
+    <string name="ePasswordToLong">пароль слишком длинный!</string>
+    <string name="eQuestions">Вопросов нет.\nЕсли вы считаете, что это ошибка, пожалуйста, свяжитесь с разработчиком.</string>
+    <string name="eRetrievingData">Что-то пошло не так при загрузке данных. Пожалуйста, попробуйте еще раз позже.</string>
+    <string name="eSelectCountry">Пожалуйста, выберите свою страну!</string>
+    <string name="eSelectOption">Пожалуйста, сначала выберите вариант!</string>
+    <string name="eServerConnection">Не удалось установить соединение с сервером.</string>
+    <string name="eShowErrorAds">Реклама не может быть показана</string>
+    <string name="eUsernameInUse">Это имя пользователя занято. Пожалуйста, выберите другое или воспользуйтесь предложенным.</string>
+    <string name="eUsernamePassword">Неверный емайл или пароль. Пожалуйста, проверьте свой ввод.</string>
+    <string name="eUsernameTooShort">Имя пользователя должно содержать не менее 5 символов!</string>
+    <string name="eUsernameTooLong">Имя пользователя не может превышать 25 символов!</string>
+
+    <string name="cDescTrophy">золотой кубок</string>
+    <string name="eDescTrophySad">грустно смотрящийся смайлик</string>
+    <string name="descBirthdayCake">Вкусно выглядящий кекс</string>
+    <string name="title_activity_score">ScoreActivity</string>
+    <string name="action_settings">Настройки</string>
+    <string name="title_activity_stats">StatsActivity</string>
+</resources>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UserActivity">
+
+    <ProgressBar
+        android:id="@+id/progressbarUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/profileLayoutUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ebca0707"
+        android:paddingBottom="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/profileProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:text="@string/app_name_profile"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profileNameUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="46dp"
+            android:text="@string/unknownComrade"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profileLayoutUser">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/emailUser"
+                android:layout_width="match_parent"
+                style="@style/TextViewProfile"
+                android:text="@string/email" />
+
+            <TextView
+                android:id="@+id/birthdayUser"
+                android:layout_width="match_parent"
+                style="@style/TextViewProfile"
+                android:drawableEnd="@drawable/ccp_down_arrow"
+                android:text="@string/birthdayUser" />
+
+            <TextView
+                android:id="@+id/genderUser"
+                android:layout_width="match_parent"
+                style="@style/TextViewProfile"
+                android:text="@string/genderUser" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/appWhite"
+                android:elevation="4dp"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/country"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccpUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_autoDetectLanguage="true"
+                    app:ccp_rememberLastSelection="true"
+                    app:ccp_selectionMemoryTag="myCcpCountry"
+                    app:ccp_showFullName="true"
+                    app:ccp_showPhoneCode="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/appWhite"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/questionsLanguage"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/userTvQLang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/questionLangEN"
+                    android:textSize="16sp"
+                    android:minWidth="100dp"
+                    android:textColor="@android:color/black"
+                    android:drawableEnd="@drawable/ccp_down_arrow"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/appWhite"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userprofilePlayMusic"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+                <ImageView
+                    android:id="@+id/userPlayMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:src="@drawable/ic_volume_up_black_24dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/userTVbdInfo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/defaultString"
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvErrorUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="@string/defaultString"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold|italic"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/userDoneFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_stat_check"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/userBackFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

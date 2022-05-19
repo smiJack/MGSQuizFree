@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ScoreActivity"
+    android:background="@color/appRed">
+
+    <LinearLayout
+        android:id="@+id/adsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scoreView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            ads:adSize="LARGE_BANNER"
+            android:layout_gravity="center"
+            ads:adUnitId="@string/ad_score_top"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/scoreAdPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@android:color/holo_purple"
+            android:text="@string/eShowErrorAds"
+            android:textSize="@dimen/text18"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/adsLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/scoreConstraintLayout">
+
+
+            <LinearLayout
+                android:id="@+id/scoreLinearLayoutWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivTrophyScore"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/trophy"
+                    android:contentDescription="@string/cDescTrophy"/>
+
+                <TextView
+                    android:id="@+id/tvCongratsScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:text="@string/congratsScoreNewHighscore"
+                    android:textSize="@dimen/text18"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/scoreLblQuestionsAnswered"
+                style="@style/statsO"
+                android:text="@string/questionsAnswered"
+                android:layout_marginTop="36dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scoreLinearLayoutWelcome"
+                app:layout_constraintWidth_percent="0.61" />
+            <TextView
+                android:id="@+id/scoreTVQuestionsAnswered"
+                style="@style/statsO"
+                android:text="@string/questionsAnsweredNumber"
+                android:layout_marginTop="36dp"
+                app:layout_constraintBottom_toBottomOf="@id/scoreLblQuestionsAnswered"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/scoreLblQuestionsAnswered"
+                app:layout_constraintTop_toBottomOf="@id/scoreLinearLayoutWelcome"/>
+
+            <TextView
+                android:id="@+id/scoreLblQuestionsAnsweredRowCurrent"
+                style="@style/statsO"
+                android:text="@string/scoreCorrectAnswersCurrent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scoreLblQuestionsAnswered"
+                app:layout_constraintWidth_percent="0.61"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/scoreTVQuestionsAnsweredRowCurrent"
+                style="@style/statsO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/scoreLblQuestionsAnsweredRowCurrent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/scoreLblQuestionsAnsweredRowCurrent"
+                app:layout_constraintTop_toBottomOf="@id/scoreLblQuestionsAnswered"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/scoreLblQuestionsAnsweredRowRecord"
+                style="@style/statsO"
+                android:text="@string/scoreCorrectAnswersRecord"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scoreLblQuestionsAnsweredRowCurrent"
+                app:layout_constraintWidth_percent="0.61"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/scoreTVQuestionsAnsweredRowRecord"
+                style="@style/statsO"
+                android:text="@string/statsQuestions"
+                android:freezesText="true"
+                app:layout_constraintBottom_toBottomOf="@id/scoreLblQuestionsAnsweredRowRecord"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/scoreLblQuestionsAnsweredRowRecord"
+                app:layout_constraintTop_toBottomOf="@id/scoreLblQuestionsAnsweredRowCurrent"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvLblScoreCurrentScore"
+                style="@style/statsO"
+                android:text="@string/scoreCurrent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scoreLblQuestionsAnsweredRowRecord"
+                app:layout_constraintWidth_percent="0.61"/>
+            <TextView
+                android:id="@+id/tvScoreCurrentScore"
+                style="@style/statsO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblScoreCurrentScore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvLblScoreCurrentScore"
+                app:layout_constraintTop_toBottomOf="@id/scoreLblQuestionsAnsweredRowRecord" />
+
+            <TextView
+                android:id="@+id/tvLblScoreHighestScore"
+                style="@style/statsO"
+                android:text="@string/scoreHighest"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblScoreCurrentScore"
+                app:layout_constraintWidth_percent="0.61" />
+            <TextView
+                android:id="@+id/tvScoreHighestScore"
+                style="@style/statsO"
+                android:text="@string/scorePoints"
+                android:freezesText="true"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblScoreHighestScore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvLblScoreHighestScore"
+                app:layout_constraintTop_toBottomOf="@id/tvLblScoreCurrentScore" />
+
+            <TextView
+                android:id="@+id/tvLblScoreTotalScore"
+                style="@style/statsO"
+                android:text="@string/scoreTotal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblScoreHighestScore"
+                app:layout_constraintWidth_percent="0.61"/>
+            <TextView
+                android:id="@+id/tvScoreTotalScore"
+                style="@style/statsO"
+                android:text="@string/scorePoints"
+                android:freezesText="true"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblScoreTotalScore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvLblScoreTotalScore"
+                app:layout_constraintTop_toBottomOf="@id/tvLblScoreHighestScore" />
+
+            <TextView
+                android:id="@+id/lblAktuelleZeitScore"
+                style="@style/statsO"
+                android:text="@string/scoreAktuelleZeit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblScoreTotalScore"
+                app:layout_constraintWidth_percent="0.61" />
+            <TextView
+                android:id="@+id/tvAktuelleZeitScore"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/lblAktuelleZeitScore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lblAktuelleZeitScore"
+                app:layout_constraintTop_toBottomOf="@id/tvLblScoreTotalScore" />
+
+            <TextView
+                android:id="@+id/lblBestzeitScore"
+                style="@style/statsO"
+                android:text="@string/scoreBestzeit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblAktuelleZeitScore"
+                app:layout_constraintWidth_percent="0.61" />
+            <TextView
+                android:id="@+id/tvBestzeitScore"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                android:freezesText="true"
+                app:layout_constraintBottom_toBottomOf="@id/lblBestzeitScore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lblBestzeitScore"
+                app:layout_constraintTop_toBottomOf="@id/lblAktuelleZeitScore" />
+
+            <TextView
+                android:id="@+id/lblScoreOverallScore"
+                style="@style/statsO"
+                android:text="@string/scoreOverall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblBestzeitScore"
+                app:layout_constraintWidth_percent="0.61" />
+            <TextView
+                android:id="@+id/tvScoreOverallScore"
+                style="@style/statsO"
+                android:text="@string/scorePoints"
+                android:freezesText="true"
+                app:layout_constraintBottom_toBottomOf="@id/lblScoreOverallScore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lblScoreOverallScore"
+                app:layout_constraintTop_toBottomOf="@id/lblBestzeitScore" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvScoreOverallScore"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scoreFabShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scoreFabShowStats"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_menu_share"
+        app:maxImageSize="32dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scoreFabMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_home"
+        app:maxImageSize="40dp"
+        app:fabCustomSize="64dp"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scoreFabPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_reload"
+        app:maxImageSize="40dp"
+        app:fabCustomSize="64dp"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/scoreFabMainMenu"
+        app:layout_constraintEnd_toStartOf="@id/scoreFabShowStats"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scoreFabShowStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_stats"
+        app:maxImageSize="40dp"
+        app:fabCustomSize="64dp"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnMainMenuScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            style="@style/btnBlack"
+            android:text="@string/mainMenu"/>
+
+        <Button
+            android:id="@+id/btnPlayAgainScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            style="@style/btnBlack"
+            android:text="@string/playAgain"/>
+
+        <Button
+            android:id="@+id/btnShowStatsScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            style="@style/btnBlack"
+            android:text="@string/showStats"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

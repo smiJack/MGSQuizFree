@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appRed"
+    tools:context=".ui.QuizActivity">
+
+    <RelativeLayout
+        android:id="@+id/quizRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvQuestionsCountQuiz"
+            style="@style/qV"
+            android:freezesText="true"
+            android:text="@string/questionsCount" />
+
+        <TextView
+            android:id="@+id/tvCategoryQuiz"
+            style="@style/qV"
+            android:layout_below="@id/tvQuestionsCountQuiz"
+            android:freezesText="true"
+            android:text="@string/category" />
+
+        <TextView
+            android:id="@+id/tvDifficultyLevelQuiz"
+            style="@style/qV"
+            android:layout_below="@id/tvCategoryQuiz"
+            android:freezesText="true"
+            android:text="@string/difficulty" />
+
+        <TextView
+            android:id="@+id/tvCountdownQuiz"
+            style="@style/qV"
+            android:layout_alignParentEnd="true"
+            android:freezesText="true"
+            android:text="@string/timerDefault"
+            android:textSize="40sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/quizRelativeLayout"
+        android:layout_marginEnd="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/tvQuestionQuiz"
+                style="@style/qO"
+                android:layout_width="match_parent"
+                android:text="Here will be the question \n Here will be the question"
+                android:freezesText="true"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvOption1Quiz"
+                style="@style/qO"
+                android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                android:text="This is a much longer Option 1 here"
+                android:freezesText="true"/>
+
+            <TextView
+                android:id="@+id/tvOption2Quiz"
+                style="@style/qO"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:freezesText="true"
+                android:text="Option 2" />
+
+            <TextView
+                android:id="@+id/tvOption3Quiz"
+                style="@style/qO"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:freezesText="true"
+                android:text="Option 3" />
+
+            <TextView
+                android:id="@+id/tvOption4Quiz"
+                style="@style/qO"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:freezesText="true"
+                android:text="Option 4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/quizView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_quiz_bottom"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/quizAdPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/holo_purple"
+        android:text="@string/eShowErrorAds"
+        android:textSize="@dimen/text18"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

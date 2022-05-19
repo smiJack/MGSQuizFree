@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
+    <color name="colorPrimary">#c71e1e</color>
+    <color name="colorPrimaryDark">#a10c0c</color>
+    <color name="colorAccent">#dcfc6e1c</color>
+    <color name="appRed">#971313</color>
+    <color name="appWhite">#ffffff</color>
+    <color name="appYellow">#ffea00</color>
+    <color name="blueLight">#B3E5FC</color>
+    <color name="etGrey">#9c9797</color>
+    <color name="qBG_Lite">#f3f3f3</color>
+    <color name="qBG_Green">@android:color/holo_green_dark</color>
+    <color name="qBG_S">#fcc257</color>
+    <color name="qBG_F">#fc2a26</color>
+</resources>

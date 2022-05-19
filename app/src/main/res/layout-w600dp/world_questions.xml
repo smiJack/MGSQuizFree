@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.WorldFragmentQuestions">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/worldQU1"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV1"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/worldQU2"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU1"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV2"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU2"
+                app:layout_constraintTop_toBottomOf="@id/worldQU1" />
+
+            <TextView
+                android:id="@+id/worldQU3"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU2"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV3"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU3"
+                app:layout_constraintTop_toBottomOf="@id/worldQU2" />
+
+            <TextView
+                android:id="@+id/worldQU4"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU3"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV4"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU4"
+                app:layout_constraintTop_toBottomOf="@id/worldQU3" />
+
+            <TextView
+                android:id="@+id/worldQU5"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU4"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV5"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU5"
+                app:layout_constraintTop_toBottomOf="@id/worldQU4" />
+
+            <TextView
+                android:id="@+id/worldQU6"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU5"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV6"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU6"
+                app:layout_constraintTop_toBottomOf="@id/worldQU5" />
+
+            <TextView
+                android:id="@+id/worldQU7"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU6"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV7"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU7"
+                app:layout_constraintTop_toBottomOf="@id/worldQU6" />
+
+            <TextView
+                android:id="@+id/worldQU8"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU7"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV8"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU8"
+                app:layout_constraintTop_toBottomOf="@id/worldQU7" />
+
+            <TextView
+                android:id="@+id/worldQU9"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU8"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV9"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU9"
+                app:layout_constraintTop_toBottomOf="@id/worldQU8" />
+
+            <TextView
+                android:id="@+id/worldQU10"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU9"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldQV10"
+                style="@style/worldO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/worldQU10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldQU10"
+                app:layout_constraintTop_toBottomOf="@id/worldQU9" />
+
+            <TextView
+                android:id="@+id/worldQOther"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldQU10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

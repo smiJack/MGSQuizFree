@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CategoryActivity">
+
+    <TextView
+        android:id="@+id/categoryAppname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/header"
+        android:text="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/categoryChooseCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/categoryAppname"
+        style="@style/header"
+        android:text="@string/chooseCategory"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/categoryChooseCategory">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/difficultyNormalCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    style="@style/btnBlack"
+                    android:layout_marginEnd="24dp"
+                    android:padding="2dp"
+                    android:text="@string/categoryNormal"
+                    android:tag="@string/tagNormal"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/difficultyHardCategory"
+                    android:layout_height="35dp"
+                    android:layout_width="0dp"
+                    style="@style/btnBlack"
+                    android:padding="2dp"
+                    android:text="@string/categoryHard"
+                    android:tag="@string/tagHard"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mgs1Category"
+                android:layout_width="match_parent"
+                style="@style/catSelect"
+                android:text="@string/metal_gear_solid_1"
+                android:tag="@string/tagMGS1"
+                android:layout_marginTop="30dp"/>
+            <Button
+                android:id="@+id/mgs2Category"
+                android:layout_width="match_parent"
+                style="@style/catSelect"
+                android:text="@string/metal_gear_solid_2"
+                android:tag="@string/tagMGS2"
+                android:layout_marginTop="16dp"/>
+            <Button
+                android:id="@+id/mgs3Category"
+                android:layout_width="match_parent"
+                style="@style/catSelect"
+                android:text="@string/metal_gear_solid_3"
+                android:tag="@string/tagMGS3"
+                android:layout_marginTop="16dp"/>
+            <Button
+                android:id="@+id/mgs4Category"
+                android:layout_width="match_parent"
+                style="@style/catSelect"
+                android:text="@string/metal_gear_solid_4"
+                android:tag="@string/tagMGS4"
+                android:layout_marginTop="16dp"/>
+            <Button
+                android:id="@+id/mgs5Category"
+                android:layout_width="match_parent"
+                style="@style/catSelect"
+                android:text="@string/metal_gear_solid_5"
+                android:tag="@string/tagMGS5"
+                android:layout_marginTop="16dp"/>
+            <Button
+                android:id="@+id/categoryTVExpert"
+                android:layout_width="match_parent"
+                style="@style/catSelect"
+                android:text="@string/metal_gear_solid_expert"
+                android:tag="@string/tagExpert"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/categoryTVMargin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="150dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/startQuizCategory"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/catSelect"
+        android:text="@string/conStartGame"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

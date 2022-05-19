@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LogInActivity">
+
+    <ProgressBar
+        android:id="@+id/progressbarLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="2dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/appNameLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        style="@style/header"
+        android:text="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/appNameLogIn">
+
+        <LinearLayout
+        android:id="@+id/linearLayoutLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblEmailLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/email_address_enter"
+            android:textSize="@dimen/text18"
+            android:hint="@string/email_address_hint"/>
+
+        <EditText
+            android:id="@+id/emailAddressLogIn"
+            android:textSize="@dimen/text18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_address_hint"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/lblPasswordLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/password"
+            android:textSize="@dimen/text18"
+            android:hint="@string/password_hint"/>
+
+        <EditText
+            android:id="@+id/passwordLogIn"
+            android:textSize="@dimen/text18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/logInButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btnBlack"
+            android:layout_marginTop="16dp"
+            android:text="@string/logIn"/>
+
+        <TextView
+            android:id="@+id/logInforgotPWtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            style="@style/TextViewButtons"
+            android:gravity="center"
+            android:text="@string/passwordForgot"/>
+
+        <TextView
+            android:id="@+id/registerTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            style="@style/TextViewButtons"
+            android:gravity="center"
+            android:text="@string/registration"/>
+
+        <TextView
+            android:id="@+id/registerWhy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            style="@style/TextViewButtons"
+            android:gravity="center"
+            android:text="@string/whyRegister"/>
+
+        <TextView
+            android:id="@+id/tvLogInError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="#808e95"
+            android:textSize="@dimen/text18"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:text="@string/eGeneral"
+            android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="130dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

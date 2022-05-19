@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FAQsActivity">
+
+    <TextView
+        android:id="@+id/faqsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faqsTitle"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/faqsTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/faqsLblQLangs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/etGrey"
+                style="@style/faqs"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/faqsAvailableQLangs"/>
+            <TextView
+                android:id="@+id/faqsTVQLangs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/faqs"
+                android:text="@string/faqsAvailableQLangsDesc"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/faqsLblPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/etGrey"
+                style="@style/faqs"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/faqsPoints"/>
+            <TextView
+                android:id="@+id/faqsTVPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/faqs"
+                android:text="@string/faqsPointsDesc"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/faqsLblTimePenalty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/etGrey"
+                style="@style/faqs"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/faqsTimePenalty"/>
+            <TextView
+                android:id="@+id/faqsTVTimePenalty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/faqs"
+                android:text="@string/faqsTimePenaltyDesc"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/faqsLblLockedSections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/etGrey"
+                style="@style/faqs"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/faqsLockedSectionsLbl"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/faqsTVLockedSections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/faqs"
+                android:text="@string/faqsLockedSections"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

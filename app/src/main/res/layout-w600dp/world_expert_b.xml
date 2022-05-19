@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.WorldFragmentExpertB">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/worldEBU1"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV1"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/worldEBU2"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU1"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV2"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU2"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU1" />
+
+            <TextView
+                android:id="@+id/worldEBU3"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU2"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV3"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU3"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU2" />
+
+            <TextView
+                android:id="@+id/worldEBU4"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU3"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV4"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU4"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU3" />
+
+            <TextView
+                android:id="@+id/worldEBU5"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU4"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV5"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU5"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU4" />
+
+            <TextView
+                android:id="@+id/worldEBU6"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU5"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV6"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU6"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU5" />
+
+            <TextView
+                android:id="@+id/worldEBU7"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU6"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV7"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU7"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU6" />
+
+            <TextView
+                android:id="@+id/worldEBU8"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU7"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV8"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU8"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU7" />
+
+            <TextView
+                android:id="@+id/worldEBU9"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU8"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV9"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU9"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU8" />
+
+            <TextView
+                android:id="@+id/worldEBU10"
+                style="@style/worldO"
+                android:text="@string/aboutUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU9"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/worldEBV10"
+                style="@style/worldO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/worldEBU10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/worldEBU10"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU9" />
+
+            <TextView
+                android:id="@+id/worldEBOther"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/worldEBU10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

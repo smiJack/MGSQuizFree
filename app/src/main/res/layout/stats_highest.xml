@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/statsHighestSubConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="4dp">
+
+            <TextView
+                android:id="@+id/tvLblMGS1NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS1n"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/statsHighestSubConstraintLayout"
+                app:layout_constraintTop_toTopOf="@id/tvMGS1NScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS1NScoreHighestStats"
+                app:layout_constraintWidth_percent="0.63"/>
+            <TextView
+                android:id="@+id/tvMGS1NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintTop_toTopOf="@id/statsHighestSubConstraintLayout"
+                app:layout_constraintStart_toEndOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@id/statsHighestSubConstraintLayout"/>
+
+
+            <TextView
+                android:id="@+id/tvLblMGS1HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS1h"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS1HScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS1HScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS1HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS1NScoreHighestStats"/>
+
+            <TextView
+                android:id="@+id/tvLblMGS2NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS2n"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS2NScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS2NScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS2NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS1HScoreHighestStats"/>
+
+            <TextView
+                android:id="@+id/tvLblMGS2HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS2h"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS2HScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS2HScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS2HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS2NScoreHighestStats"/>
+
+            <TextView
+                android:id="@+id/tvLblMGS3NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS3n"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS3NScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS3NScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS3NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS2HScoreHighestStats"/>
+
+            <TextView
+                android:id="@+id/tvLblMGS3HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS3h"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS3HScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS3HScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS3HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS3NScoreHighestStats"/>
+
+            <TextView
+                android:id="@+id/tvLblMGS4NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS4n"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS4NScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS4NScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS4NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS3HScoreHighestStats"/>
+
+            <TextView
+                android:id="@+id/tvLblMGS4HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS4h"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS4HScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS4HScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS4HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS4NScoreHighestStats"/>
+
+            <TextView
+                android:id="@+id/tvLblMGS5NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS5n"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS5NScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS5NScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS5NScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS4HScoreHighestStats"/>
+
+            <TextView
+                android:id="@+id/tvLblMGS5HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/statsMGS5h"
+                android:textSize="@dimen/text18"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toTopOf="@id/tvMGS5HScoreHighestStats"
+                app:layout_constraintBottom_toBottomOf="@id/tvMGS5HScoreHighestStats" />
+            <TextView
+                android:id="@+id/tvMGS5HScoreHighestStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/scorePoints"
+                android:textSize="@dimen/text18"
+                app:layout_constraintStart_toStartOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintEnd_toEndOf="@+id/tvMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS5NScoreHighestStats"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NScoreHighestStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvMGS5HScoreHighestStats"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

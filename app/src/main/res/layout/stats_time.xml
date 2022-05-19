@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.StatsTime">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/statsLayoutQuizDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            >
+
+            <TextView
+                android:id="@+id/tvLblMGS1NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS1n"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.57" />
+            <TextView
+                android:id="@+id/tvMGS1NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLblMGS1HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS1h"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS1NQuizDurationStats" />
+            <TextView
+                android:id="@+id/tvMGS1HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS1HQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS1NQuizDurationStats" />
+
+            <TextView
+                android:id="@+id/tvLblMGS2NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS2n"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS1HQuizDurationStats" />
+            <TextView
+                android:id="@+id/tvMGS2NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS2NQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS1HQuizDurationStats" />
+
+            <TextView
+                android:id="@+id/tvLblMGS2HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS2h"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS2NQuizDurationStats" />
+            <TextView
+                android:id="@+id/tvMGS2HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS2HQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS2NQuizDurationStats" />
+
+            <TextView
+                android:id="@+id/tvLblMGS3NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS3n"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS2HQuizDurationStats"
+                />
+            <TextView
+                android:id="@+id/tvMGS3NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS3NQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS2HQuizDurationStats" />
+
+            <TextView
+                android:id="@+id/tvLblMGS3HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS3h"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS3NQuizDurationStats"
+                />
+            <TextView
+                android:id="@+id/tvMGS3HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS3HQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS3NQuizDurationStats" />
+
+            <TextView
+                android:id="@+id/tvLblMGS4NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS4n"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS3HQuizDurationStats"
+                />
+            <TextView
+                android:id="@+id/tvMGS4NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS4NQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS3HQuizDurationStats" />
+
+            <TextView
+                android:id="@+id/tvLblMGS4HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS4h"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS4NQuizDurationStats"
+                />
+            <TextView
+                android:id="@+id/tvMGS4HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS4HQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS4NQuizDurationStats" />
+
+            <TextView
+                android:id="@+id/tvLblMGS5NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS5n"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS4HQuizDurationStats"
+                />
+            <TextView
+                android:id="@+id/tvMGS5NQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS5NQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS4HQuizDurationStats" />
+
+            <TextView
+                android:id="@+id/tvLblMGS5HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/statsMGS5h"
+                app:layout_constraintStart_toStartOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvLblMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS5NQuizDurationStats"
+                />
+            <TextView
+                android:id="@+id/tvMGS5HQuizDurationStats"
+                style="@style/statsO"
+                android:text="@string/scoreTime"
+                app:layout_constraintBottom_toBottomOf="@id/tvLblMGS5HQuizDurationStats"
+                app:layout_constraintStart_toStartOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintEnd_toEndOf="@id/tvMGS1NQuizDurationStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvLblMGS5NQuizDurationStats" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                app:layout_constraintTop_toBottomOf="@id/tvLblMGS5HQuizDurationStats"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

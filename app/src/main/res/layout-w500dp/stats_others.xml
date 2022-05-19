@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StatsOthers">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/statsLblTVQTotal"
+                style="@style/statsO"
+                android:text="@string/statsQTotal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/tvQTotalStats"
+                style="@style/statsO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/statsLblTVQTotal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsLblTVQTotal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/statsLblTVQAnswered"
+                style="@style/statsO"
+                android:text="@string/statsQAnswered"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statsLblTVQTotal"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/statsTVQAnsweredTotal"
+                style="@style/statsO"
+                android:text="@string/statsQuestions"
+                app:layout_constraintBottom_toBottomOf="@id/statsLblTVQAnswered"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsLblTVQAnswered"
+                app:layout_constraintTop_toBottomOf="@+id/statsLblTVQTotal" />
+
+            <TextView
+                android:id="@+id/statsLblTVQAnsweredRate"
+                style="@style/statsO"
+                android:text="@string/statsQAnsweredRate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statsLblTVQAnswered"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/statsTVQAnsweredRate"
+                style="@style/statsO"
+                android:text="@string/defaultString"
+                app:layout_constraintBottom_toBottomOf="@id/statsLblTVQAnsweredRate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsLblTVQAnsweredRate"
+                app:layout_constraintTop_toBottomOf="@+id/statsLblTVQAnswered" />
+
+            <TextView
+                android:id="@+id/statsLblTVCorrectAnsweresA"
+                style="@style/statsO"
+                android:text="@string/statsExpertCorrectAnswersA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statsLblTVQAnsweredRate"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/tvStatsCorrectAnsweresA"
+                style="@style/statsO"
+                android:text="@string/statsAnswers"
+                app:layout_constraintBottom_toBottomOf="@id/statsLblTVCorrectAnsweresA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsLblTVCorrectAnsweresA"
+                app:layout_constraintTop_toBottomOf="@+id/statsLblTVQAnsweredRate" />
+
+            <TextView
+                android:id="@+id/statsLblTVCorrectAnsweresD"
+                style="@style/statsO"
+                android:text="@string/statsExpertCorrectAnswersD"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVCorrectAnsweresA"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/tvStatsCorrectAnsweresD"
+                style="@style/statsO"
+                android:text="@string/statsAnswers"
+                app:layout_constraintBottom_toBottomOf="@id/statsLblTVCorrectAnsweresD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsLblTVCorrectAnsweresD"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVCorrectAnsweresA" />
+
+            <TextView
+                android:id="@+id/statsLblTVScoreExpertA"
+                style="@style/statsO"
+                android:text="@string/statsExpertTotalScoreA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVCorrectAnsweresD"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/statsTVScoreExpertA"
+                style="@style/statsO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/statsLblTVScoreExpertA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsLblTVScoreExpertA"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVCorrectAnsweresD" />
+
+            <TextView
+                android:id="@+id/statsLblTVScoreExpertD"
+                style="@style/statsO"
+                android:text="@string/statsExpertTotalScoreD"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVScoreExpertA"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/statsTVScoreExpertD"
+                style="@style/statsO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/statsLblTVScoreExpertD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsLblTVScoreExpertD"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVScoreExpertA" />
+
+            <TextView
+                android:id="@+id/statsLblTVScoreOverall"
+                style="@style/statsO"
+                android:text="@string/statsScoreOverall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVScoreExpertD"
+                app:layout_constraintWidth_percent="0.62" />
+            <TextView
+                android:id="@+id/statsTVScoreOverall"
+                style="@style/statsO"
+                android:text="@string/scorePoints"
+                app:layout_constraintBottom_toBottomOf="@id/statsLblTVScoreOverall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsLblTVScoreOverall"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVScoreExpertD" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statsLblTVScoreOverall"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>
