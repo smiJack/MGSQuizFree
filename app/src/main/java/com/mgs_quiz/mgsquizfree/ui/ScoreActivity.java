@@ -1,31 +1,5 @@
 package com.mgs_quiz.mgsquizfree.ui;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.text.Html;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.auth.FirebaseAuth;
-import com.mgs_quiz.mgsquizfree.R;
-import com.mgs_quiz.mgsquizfree.U313;
-
-import java.util.Locale;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import static com.mgs_quiz.mgsquizfree.APR.app_launched;
 import static com.mgs_quiz.mgsquizfree.AppAdRequest.getAdRequest;
 import static com.mgs_quiz.mgsquizfree.GameData.CAT_ALL;
@@ -59,6 +33,37 @@ import static com.mgs_quiz.mgsquizfree.GameData.SP_SCOT_KEY;
 import static com.mgs_quiz.mgsquizfree.GameData.SP_USERNAME;
 import static com.mgs_quiz.mgsquizfree.GetData.getKeys;
 import static com.mgs_quiz.mgsquizfree.GetFormattedNumber.getFormattedNumber;
+
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.text.Html;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.mgs_quiz.mgsquizfree.R;
+import com.mgs_quiz.mgsquizfree.U313;
+
+import java.util.Locale;
 
 public class ScoreActivity extends AppCompatActivity {
 
@@ -108,7 +113,7 @@ public class ScoreActivity extends AppCompatActivity {
         AdRequest request = getAdRequest(eea);
         view.setAdListener(new AdListener(){
             @Override
-            public void onAdFailedToLoad(int error) {
+            public void onAdFailedToLoad(LoadAdError adError) {
                 placeholder.setVisibility(View.VISIBLE);
             }
 
@@ -227,23 +232,42 @@ public class ScoreActivity extends AppCompatActivity {
         if (count >= 2) {
             count = 0;
             sharedPrefs.edit().putInt(INTERSTITIAL_NOS, count).apply();
-            ad = new InterstitialAd(this);
-            ad.setAdUnitId(INTERSTITIAL);
-            ad.setAdListener(new AdListener() {
+            ad.setFullScreenContentCallback(new FullScreenContentCallback() {
                 @Override
-                public void onAdLoaded() {
+                public void onAdClicked() {
+                    super.onAdClicked();
                 }
 
-                @Override
-                public void onAdFailedToLoad(int errorCode) {
-                }
-
-                @Override
-                public void onAdClosed() {
+                public void onAdDismissedFullScreenContent() {
+                    // Called when fullscreen content is dismissed.
                     playAgain();
                 }
+
+                @Override
+                public void onAdFailedToShowFullScreenContent(AdError adError) {
+                    // Called when fullscreen content failed to show.
+                }
+
+                @Override
+                public void onAdShowedFullScreenContent() {
+                    // Called when fullscreen content is shown.
+                    // Make sure to set your reference to null so you don't
+                    // show it a second time.
+                    ad = null;
+                }
             });
-            ad.loadAd(getAdRequest(eea));
+            InterstitialAd.load(this, INTERSTITIAL, getAdRequest(eea),
+                    new InterstitialAdLoadCallback() {
+                        @Override
+                        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                            ad = null;
+                        }
+
+                        @Override
+                        public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                            ad = interstitialAd;
+                        }
+                    });
         } else {
             count++;
             sharedPrefs.edit().putInt(INTERSTITIAL_NOS, count).apply();
@@ -286,8 +310,8 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private void showAd() {
-        if (ad != null && ad.isLoaded()) {
-            ad.show();
+        if (ad != null) {
+            ad.show(ScoreActivity.this);
         } else {
             playAgain();
         }

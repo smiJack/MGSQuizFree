@@ -1,6 +1,10 @@
 package com.mgs_quiz.mgsquizfree.ui;
 
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMES;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_UID;
+
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Build;
@@ -16,15 +20,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.mgs_quiz.mgsquizfree.R;
 
 import java.util.Locale;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMES;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_UID;
-import static com.mgs_quiz.mgsquizfree.GetData.getDisplay;
 
 public class FeedbackActivity extends AppCompatActivity {
 
@@ -60,7 +60,7 @@ public class FeedbackActivity extends AppCompatActivity {
         );
 
         spinner.setAdapter(arrayAdapter);
-        spinner.getBackground().setColorFilter(getResources().getColor(R.color.etGrey), PorterDuff.Mode.SRC_ATOP);
+        spinner.getBackground().setColorFilter(getResources().getColor(R.color.etGrey, null), PorterDuff.Mode.SRC_ATOP);
     }
 
     private void initL() {
@@ -78,12 +78,7 @@ public class FeedbackActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-        btnEmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                generateMessage();
-            }
-        });
+        btnEmail.setOnClickListener(v -> generateMessage());
     }
 
     private void generateMessage() {
@@ -95,7 +90,7 @@ public class FeedbackActivity extends AppCompatActivity {
                     Build.VERSION.SDK_INT + "_" +
                     Locale.getDefault().getLanguage() +
                     getApplicationContext().getSharedPreferences(SP_NAMES, MODE_PRIVATE).getString(SP_UID, getString(R.string.defaultString)) + ":" +
-                    Build.DISPLAY + ":" + getDisplay(this);
+                    Build.DISPLAY + ":" + getCalculatedDisplay();
 
         if (!inputValid()) {
             return;
@@ -112,6 +107,11 @@ public class FeedbackActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, getString(R.string.eNoEmailApp), Toast.LENGTH_LONG).show();
         }
+    }
+
+    private String getCalculatedDisplay() {
+        return Resources.getSystem().getDisplayMetrics().widthPixels + "x" +
+                Resources.getSystem().getDisplayMetrics().heightPixels;
     }
 
     private boolean inputValid() {

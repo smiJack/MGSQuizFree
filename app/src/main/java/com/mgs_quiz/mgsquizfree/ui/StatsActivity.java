@@ -1,5 +1,14 @@
 package com.mgs_quiz.mgsquizfree.ui;
 
+import static com.mgs_quiz.mgsquizfree.AppAdRequest.getAdRequest;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_DEF;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_KEYS_SCORE;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMES;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAME_EEA;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_QTOTALAA_KEY;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_QTOTALDA_KEY;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_SCOT_KEY;
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,15 +21,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.tabs.TabLayout;
-import com.mgs_quiz.mgsquizfree.R;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -30,14 +30,15 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import static com.mgs_quiz.mgsquizfree.AppAdRequest.getAdRequest;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_DEF;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_KEYS_SCORE;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMES;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAME_EEA;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_QTOTALAA_KEY;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_QTOTALDA_KEY;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_SCOT_KEY;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
+import com.mgs_quiz.mgsquizfree.R;
 
 public class StatsActivity extends AppCompatActivity {
 
@@ -83,7 +84,7 @@ public class StatsActivity extends AppCompatActivity {
         AdRequest request = getAdRequest(eea);
         view.setAdListener(new AdListener(){
             @Override
-            public void onAdFailedToLoad(int error) {
+            public void onAdFailedToLoad(LoadAdError adError) {
                 placeholder.setVisibility(View.VISIBLE);
             }
 

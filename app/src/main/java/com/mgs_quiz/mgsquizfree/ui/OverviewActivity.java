@@ -1,28 +1,5 @@
 package com.mgs_quiz.mgsquizfree.ui;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.mgs_quiz.mgsquizfree.GdprHelper;
-import com.mgs_quiz.mgsquizfree.R;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import static com.mgs_quiz.mgsquizfree.APR.app_launched;
 import static com.mgs_quiz.mgsquizfree.AppAdRequest.getAdRequest;
 import static com.mgs_quiz.mgsquizfree.BDT.setBackground;
@@ -36,6 +13,30 @@ import static com.mgs_quiz.mgsquizfree.GameData.SP_USERNAME;
 import static com.mgs_quiz.mgsquizfree.GetData.getBirthdayMessage;
 import static com.mgs_quiz.mgsquizfree.U313.x1003;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.mgs_quiz.mgsquizfree.GdprHelper;
+import com.mgs_quiz.mgsquizfree.R;
+
+import java.util.Objects;
+
 public class OverviewActivity extends AppCompatActivity {
 
     private TextView name;
@@ -45,7 +46,7 @@ public class OverviewActivity extends AppCompatActivity {
     private Button btnWorld;
     private Button btnStats;
     private Button btnSendRequest;
-    private Button btnIviteFriend;
+    private Button btnInviteFriend;
     private Button btnFAQs;
     private Button btnAbout;
     private FloatingActionButton fabShare;
@@ -72,10 +73,7 @@ public class OverviewActivity extends AppCompatActivity {
         MobileAds.setRequestConfiguration(configuration);
 
         //MobileAds.initialize(this);
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
+        MobileAds.initialize(this, initializationStatus -> {
         });
         MobileAds.setAppMuted(true);
 
@@ -83,7 +81,7 @@ public class OverviewActivity extends AppCompatActivity {
         AdRequest request = getAdRequest(eea);
         mView.setAdListener(new AdListener(){
             @Override
-            public void onAdFailedToLoad(int error) {
+            public void onAdFailedToLoad(LoadAdError adError) {
                 placeholder.setVisibility(View.VISIBLE);
             }
 
@@ -109,7 +107,7 @@ public class OverviewActivity extends AppCompatActivity {
         btnStats = findViewById(R.id.btnShowStatsOverview);
         btnWorld = findViewById(R.id.btnShowWorld);
         btnSendRequest = findViewById(R.id.overviewSendRequestBtn);
-        btnIviteFriend = findViewById(R.id.overviewBtnTellAFriend);
+        btnInviteFriend = findViewById(R.id.overviewBtnTellAFriend);
         btnFAQs = findViewById(R.id.overviewBtnFaq);
         btnAbout = findViewById(R.id.overviewBtnAbout);
         fabShare = findViewById(R.id.overviewFabShare);
@@ -121,68 +119,23 @@ public class OverviewActivity extends AppCompatActivity {
     }
 
     private void initL() {
-        btnNewQuiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startQuiz();
-            }
-        });
+        btnNewQuiz.setOnClickListener(view -> startQuiz());
 
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showProfile();
-            }
-        });
+        btnProfile.setOnClickListener(view -> showProfile());
 
-        btnStats.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(context, StatsActivity.class));
-            }
-        });
+        btnStats.setOnClickListener(view -> startActivity(new Intent(context, StatsActivity.class)));
 
-        btnWorld.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context, WorldActivity.class));
-            }
-        });
+        btnWorld.setOnClickListener(v -> startActivity(new Intent(context, WorldActivity.class)));
 
-        btnSendRequest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context, FeedbackActivity.class));
-            }
-        });
+        btnSendRequest.setOnClickListener(v -> startActivity(new Intent(context, FeedbackActivity.class)));
 
-        btnIviteFriend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                shareWithFriend(context, sharedPrefs);
-            }
-        });
+        btnInviteFriend.setOnClickListener(v -> shareWithFriend(context, sharedPrefs));
 
-        fabShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                shareWithFriend(context, sharedPrefs);
-            }
-        });
+        fabShare.setOnClickListener(v -> shareWithFriend(context, sharedPrefs));
 
-        btnFAQs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context, FAQsActivity.class));
-            }
-        });
+        btnFAQs.setOnClickListener(v -> startActivity(new Intent(context, FAQsActivity.class)));
 
-        btnAbout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context, AboutActivity.class));
-            }
-        });
+        btnAbout.setOnClickListener(v -> startActivity(new Intent(context, AboutActivity.class)));
     }
 
     @Override
@@ -228,7 +181,7 @@ public class OverviewActivity extends AppCompatActivity {
     }
 
     private void showBirthdayCongrats() {
-        if (getBirthdayMessage(this, sharedPrefs.getString(SP_BIRTHDAY, getString(R.string.defaultString)),
+        if (getBirthdayMessage(this, Objects.requireNonNull(sharedPrefs.getString(SP_BIRTHDAY, getString(R.string.defaultString))),
                 sharedPrefs.getString(SP_USERNAME, getString(R.string.unknownComrade)), birthdayTV)) {
             setBackground(this, R.color.appYellow);
             welcome.setVisibility(View.GONE);
@@ -239,7 +192,7 @@ public class OverviewActivity extends AppCompatActivity {
             setBackground(this, R.color.colorPrimaryDark);
             welcome.setVisibility(View.VISIBLE);
             birthdayLayout.setVisibility(View.GONE);
-            name.setTextColor(getResources().getColor(R.color.appWhite));
+            name.setTextColor(getResources().getColor(R.color.appWhite, null));
         }
     }
 

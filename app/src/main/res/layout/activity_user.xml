@@ -73,8 +73,8 @@
                 android:id="@+id/birthdayUser"
                 android:layout_width="match_parent"
                 style="@style/TextViewProfile"
-                android:drawableEnd="@drawable/ccp_down_arrow"
-                android:text="@string/birthdayUser" />
+                android:text="@string/birthdayUser"
+                app:drawableEndCompat="@drawable/ccp_ic_arrow_drop_down" />
 
             <TextView
                 android:id="@+id/genderUser"
@@ -141,7 +141,7 @@
                     android:textSize="16sp"
                     android:minWidth="100dp"
                     android:textColor="@android:color/black"
-                    android:drawableEnd="@drawable/ccp_down_arrow"/>
+                    app:drawableEndCompat="@drawable/ccp_ic_arrow_drop_down" />
             </LinearLayout>
 
             <LinearLayout
@@ -168,7 +168,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="48dp"
-                    android:src="@drawable/ic_volume_up_black_24dp"/>
+                    android:src="@drawable/ic_volume_up_black_24dp"
+                    android:contentDescription="TODO" />
             </LinearLayout>
 
             <TextView

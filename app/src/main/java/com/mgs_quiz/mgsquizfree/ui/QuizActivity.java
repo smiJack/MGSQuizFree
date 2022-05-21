@@ -1,38 +1,5 @@
 package com.mgs_quiz.mgsquizfree.ui;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.os.Handler;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-import com.mgs_quiz.mgsquizfree.R;
-import com.mgs_quiz.mgsquizfree.dao.QuizDBHelper;
-import com.mgs_quiz.mgsquizfree.model.Question;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Locale;
-import java.util.Random;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import static com.mgs_quiz.mgsquizfree.AppAdRequest.getAdRequest;
 import static com.mgs_quiz.mgsquizfree.GameData.BKEY_ANSWEREDQCOUNTER;
 import static com.mgs_quiz.mgsquizfree.GameData.BKEY_ANSWERS_SELECTABLE;
@@ -55,7 +22,7 @@ import static com.mgs_quiz.mgsquizfree.GameData.IKEY_Q_ANSWERED_ROW;
 import static com.mgs_quiz.mgsquizfree.GameData.IKEY_Q_TOTAL;
 import static com.mgs_quiz.mgsquizfree.GameData.IKEY_SCORE;
 import static com.mgs_quiz.mgsquizfree.GameData.IKEY_SPIELZEIT;
-import static com.mgs_quiz.mgsquizfree.GameData.INTERSTITIAL_QUIZ;
+import static com.mgs_quiz.mgsquizfree.GameData.INTERSTITIAL;
 import static com.mgs_quiz.mgsquizfree.GameData.PLAY_MUSIC;
 import static com.mgs_quiz.mgsquizfree.GameData.SCORE_LIMIT_E;
 import static com.mgs_quiz.mgsquizfree.GameData.SP_DEFZEITQ;
@@ -65,6 +32,44 @@ import static com.mgs_quiz.mgsquizfree.GameData.SP_NAME_EEA;
 import static com.mgs_quiz.mgsquizfree.GameData.SP_QLANG;
 import static com.mgs_quiz.mgsquizfree.GetData.getRate;
 import static com.mgs_quiz.mgsquizfree.GetData.getTimeLimit;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.mgs_quiz.mgsquizfree.R;
+import com.mgs_quiz.mgsquizfree.dao.QuizDBHelper;
+import com.mgs_quiz.mgsquizfree.model.Question;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Locale;
+import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -135,7 +140,7 @@ public class QuizActivity extends AppCompatActivity {
         AdRequest request = getAdRequest(eea);
         view.setAdListener(new AdListener(){
             @Override
-            public void onAdFailedToLoad(int error) {
+            public void onAdFailedToLoad(LoadAdError adError) {
                 placeholder.setVisibility(View.VISIBLE);
             }
 
@@ -146,23 +151,42 @@ public class QuizActivity extends AppCompatActivity {
         });
         view.loadAd(request);
 
-        ad = new InterstitialAd(this);
-        ad.setAdUnitId(INTERSTITIAL_QUIZ);
-        ad.setAdListener(new AdListener() {
+        ad.setFullScreenContentCallback(new FullScreenContentCallback() {
             @Override
-            public void onAdLoaded() {
+            public void onAdClicked() {
+                super.onAdClicked();
             }
 
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-            }
-
-            @Override
-            public void onAdClosed() {
+            public void onAdDismissedFullScreenContent() {
+                // Called when fullscreen content is dismissed.
                 finishQuiz();
             }
+
+            @Override
+            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                // Called when fullscreen content failed to show.
+            }
+
+            @Override
+            public void onAdShowedFullScreenContent() {
+                // Called when fullscreen content is shown.
+                // Make sure to set your reference to null so you don't
+                // show it a second time.
+                ad = null;
+            }
         });
-        ad.loadAd(getAdRequest(eea));
+        InterstitialAd.load(this, INTERSTITIAL, getAdRequest(eea),
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        ad = null;
+                    }
+
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        ad = interstitialAd;
+                    }
+                });
 
 
         initE();
@@ -337,8 +361,8 @@ public class QuizActivity extends AppCompatActivity {
             timeLeftInMillis = COUNTDOWN_IN_MILLIS;
             startCountdownTimer();
         } else {
-            if (ad.isLoaded() && (new Random().nextInt(5) > 1)) {
-                ad.show();
+            if (ad != null && (new Random().nextInt(5) > 1)) {
+                ad.show(QuizActivity.this);
             } else {
                 finishQuiz();
             }

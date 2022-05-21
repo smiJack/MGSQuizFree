@@ -1,24 +1,5 @@
 package com.mgs_quiz.mgsquizfree.ui;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.InterstitialAd;
-import com.mgs_quiz.mgsquizfree.R;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import static com.mgs_quiz.mgsquizfree.AppAdRequest.getAdRequest;
 import static com.mgs_quiz.mgsquizfree.EnableFunction.enableButton;
 import static com.mgs_quiz.mgsquizfree.GameData.ENABLE_DIF;
@@ -29,6 +10,29 @@ import static com.mgs_quiz.mgsquizfree.GameData.INTERSTITIAL;
 import static com.mgs_quiz.mgsquizfree.GameData.INTERSTITIAL_NOC;
 import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMES;
 import static com.mgs_quiz.mgsquizfree.GameData.SP_NAME_EEA;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.mgs_quiz.mgsquizfree.R;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class CategoryActivity extends AppCompatActivity {
 
@@ -63,23 +67,42 @@ public class CategoryActivity extends AppCompatActivity {
         if (count >= 2) {
             count = 0;
             sharedPrefs.edit().putInt(INTERSTITIAL_NOC, count).apply();
-            ad = new InterstitialAd(this);
-            ad.setAdUnitId(INTERSTITIAL);
-            ad.setAdListener(new AdListener() {
+            ad.setFullScreenContentCallback(new FullScreenContentCallback() {
                 @Override
-                public void onAdLoaded() {
+                public void onAdClicked() {
+                    super.onAdClicked();
                 }
 
-                @Override
-                public void onAdFailedToLoad(int errorCode) {
-                }
-
-                @Override
-                public void onAdClosed() {
+                public void onAdDismissedFullScreenContent() {
+                    // Called when fullscreen content is dismissed.
                     startQuiz();
                 }
+
+                @Override
+                public void onAdFailedToShowFullScreenContent(AdError adError) {
+                    // Called when fullscreen content failed to show.
+                }
+
+                @Override
+                public void onAdShowedFullScreenContent() {
+                    // Called when fullscreen content is shown.
+                    // Make sure to set your reference to null so you don't
+                    // show it a second time.
+                    ad = null;
+                }
             });
-            ad.loadAd(getAdRequest(eea));
+            InterstitialAd.load(this, INTERSTITIAL, getAdRequest(eea),
+                    new InterstitialAdLoadCallback() {
+                        @Override
+                        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                            ad = null;
+                        }
+
+                        @Override
+                        public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                            ad = interstitialAd;
+                        }
+                    });
         } else {
             count++;
             sharedPrefs.edit().putInt(INTERSTITIAL_NOC, count).apply();
@@ -172,8 +195,8 @@ public class CategoryActivity extends AppCompatActivity {
     }
 
     private void showAd() {
-        if (ad != null && ad.isLoaded() && (new Random().nextInt(2) == 1)) {
-            ad.show();
+        if (ad != null && (new Random().nextInt(2) == 1)) {
+            ad.show(CategoryActivity.this);
         } else {
             startQuiz();
         }

@@ -1,5 +1,14 @@
 package com.mgs_quiz.mgsquizfree.ui;
 
+import static com.mgs_quiz.mgsquizfree.AppAdRequest.getAdRequest;
+import static com.mgs_quiz.mgsquizfree.GameData.BKEY_RANKING;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMEEA;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMEED;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMEQ;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMES_EXTENSION;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMETS;
+import static com.mgs_quiz.mgsquizfree.GameData.SP_NAME_EEA;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,9 +18,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.material.tabs.TabLayout;
@@ -23,21 +39,6 @@ import java.io.BufferedInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
-import static com.mgs_quiz.mgsquizfree.AppAdRequest.getAdRequest;
-import static com.mgs_quiz.mgsquizfree.GameData.BKEY_RANKING;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMEEA;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMEED;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMEQ;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMES_EXTENSION;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAMETS;
-import static com.mgs_quiz.mgsquizfree.GameData.SP_NAME_EEA;
 
 public class WorldActivity extends AppCompatActivity {
 
@@ -69,7 +70,7 @@ public class WorldActivity extends AppCompatActivity {
         AdRequest request = getAdRequest(eea);
         view.setAdListener(new AdListener(){
             @Override
-            public void onAdFailedToLoad(int error) {
+            public void onAdFailedToLoad(LoadAdError adError) {
                 placeholder.setVisibility(View.VISIBLE);
             }
 

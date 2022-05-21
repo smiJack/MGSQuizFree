@@ -1,50 +1,5 @@
 package com.mgs_quiz.mgsquizfree.ui;
 
-import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.EmailAuthProvider;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.SetOptions;
-import com.google.firebase.firestore.WriteBatch;
-import com.hbb20.CountryCodePicker;
-import com.mgs_quiz.mgsquizfree.GameData;
-import com.mgs_quiz.mgsquizfree.GetData;
-import com.mgs_quiz.mgsquizfree.R;
-import com.mgs_quiz.mgsquizfree.model.Stats;
-import com.mgs_quiz.mgsquizfree.model.User;
-
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Random;
-
 import static com.mgs_quiz.mgsquizfree.CheckInput.isBirthdayInvalid;
 import static com.mgs_quiz.mgsquizfree.CheckInput.isEmailInvalid;
 import static com.mgs_quiz.mgsquizfree.CheckInput.isEmpty;
@@ -109,12 +64,55 @@ import static com.mgs_quiz.mgsquizfree.GameData.USERNAME_UID;
 import static com.mgs_quiz.mgsquizfree.GameData.USERSTATS;
 import static com.mgs_quiz.mgsquizfree.GameData.USERS_COLL;
 import static com.mgs_quiz.mgsquizfree.GetData.getDate;
-import static com.mgs_quiz.mgsquizfree.GetData.getDisplay;
 import static com.mgs_quiz.mgsquizfree.GetData.getQLang;
+
+import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.EmailAuthProvider;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+import com.google.firebase.firestore.WriteBatch;
+import com.hbb20.CountryCodePicker;
+import com.mgs_quiz.mgsquizfree.GameData;
+import com.mgs_quiz.mgsquizfree.GetData;
+import com.mgs_quiz.mgsquizfree.R;
+import com.mgs_quiz.mgsquizfree.model.Stats;
+import com.mgs_quiz.mgsquizfree.model.User;
+
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Random;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private Activity activity;
     private ProgressBar progressBar;
     private EditText etEmailAddress;
     private EditText etPassword;
@@ -141,7 +139,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     private int intChbDefaultColor;
     private Drawable btnDrawable;
-    private static final String TAG = "RegisterAct";
 
     private FirebaseAuth mAuth;
     private CollectionReference usernames;
@@ -164,7 +161,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void initE() {
-        activity = this;
         progressBar = findViewById(R.id.progressbarRegister);
         etEmailAddress = findViewById(R.id.emailAddressRegister);
         etPassword = findViewById(R.id.passwordRegister);
@@ -192,12 +188,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void initL() {
-        final DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
+        final DatePickerDialog.OnDateSetListener dateSetListener = (datePicker, year, monthOfYear, dayOfMonth) ->
                 setBirthdate(year, monthOfYear, dayOfMonth);
-            }
-        };
 
         etBirthday.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -228,7 +220,7 @@ public class RegisterActivity extends AppCompatActivity {
         calendar.set(Calendar.MONTH, monthOfYear);
         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-        etBirthday.setText(GetData.getBirthdayLocal(context, calendar));;
+        etBirthday.setText(GetData.getBirthdayLocal(context, calendar));
     }
 
     private void createProfile() {
@@ -364,7 +356,7 @@ public class RegisterActivity extends AppCompatActivity {
                         String userID = mAuth.getCurrentUser().getUid();
 
                         User user = new User(strEmail, strUsername, strGender, strBirthday,
-                                strCountry, strCountryCode, strRegisteredOn, Build.VERSION.SDK_INT, getDisplay(activity));
+                                strCountry, strCountryCode, strRegisteredOn, Build.VERSION.SDK_INT, getCalculatedDisplay());
                         Stats stats = new Stats(getDate());
 
                         HashMap<String, User> userHashMap = new HashMap<>();
@@ -378,14 +370,11 @@ public class RegisterActivity extends AppCompatActivity {
                         writeBatch.set(dr, userHashMap, SetOptions.merge());
                         writeBatch.set(dr, userStatsMap, SetOptions.merge());
 
-                        writeBatch.commit().addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(context, getText(R.string.account_created_successfully), Toast.LENGTH_LONG).show();
-                                createSharedPrefs();
-                                progressBar.setVisibility(View.GONE);
-                                startLogInActivity();
-                            }
+                        writeBatch.commit().addOnSuccessListener(aVoid -> {
+                            Toast.makeText(context, getText(R.string.account_created_successfully), Toast.LENGTH_LONG).show();
+                            createSharedPrefs();
+                            progressBar.setVisibility(View.GONE);
+                            startLogInActivity();
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
@@ -441,7 +430,7 @@ public class RegisterActivity extends AppCompatActivity {
         prefsEdit.putString(SP_COUNTRY_CODE, strCountryCode);
         prefsEdit.putString(SP_REGISTERDATE, strRegisteredOn);
         prefsEdit.putInt(SP_SDK, Build.VERSION.SDK_INT);
-        prefsEdit.putString(SP_DRES, getDisplay(activity));
+        prefsEdit.putString(SP_DRES, getCalculatedDisplay());
         prefsEdit.putBoolean(PLAY_MUSIC, true);
         prefsEdit.putString(SP_QLANG, getQLang(context));
 
@@ -506,5 +495,10 @@ public class RegisterActivity extends AppCompatActivity {
             btnCreateProfile.setBackgroundColor(getResources().getColor(R.color.etGrey));
         }
         btnCreateProfile.setEnabled(enabled);
+    }
+
+    private String getCalculatedDisplay() {
+        return Resources.getSystem().getDisplayMetrics().widthPixels + "x" +
+                Resources.getSystem().getDisplayMetrics().heightPixels;
     }
 }
