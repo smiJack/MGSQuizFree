@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -53,6 +54,8 @@ public class CategoryActivity extends AppCompatActivity {
     private SharedPreferences sharedPrefs;
     private InterstitialAd ad;
 
+    private static final String TAG = "CategoryActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,42 +70,57 @@ public class CategoryActivity extends AppCompatActivity {
         if (count >= 2) {
             count = 0;
             sharedPrefs.edit().putInt(INTERSTITIAL_NOC, count).apply();
-            ad.setFullScreenContentCallback(new FullScreenContentCallback() {
-                @Override
-                public void onAdClicked() {
-                    super.onAdClicked();
-                }
 
-                public void onAdDismissedFullScreenContent() {
-                    // Called when fullscreen content is dismissed.
-                    startQuiz();
-                }
+            Log.d(TAG, "onCreate: ## within if");
 
-                @Override
-                public void onAdFailedToShowFullScreenContent(AdError adError) {
-                    // Called when fullscreen content failed to show.
-                }
-
-                @Override
-                public void onAdShowedFullScreenContent() {
-                    // Called when fullscreen content is shown.
-                    // Make sure to set your reference to null so you don't
-                    // show it a second time.
-                    ad = null;
-                }
-            });
             InterstitialAd.load(this, INTERSTITIAL, getAdRequest(eea),
                     new InterstitialAdLoadCallback() {
                         @Override
                         public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                            Log.d(TAG, "onAdFailedToLoad: ## ");
+                            Log.d(TAG, "onAdFailedToLoad: ## " +  loadAdError.getResponseInfo().getResponseId());
+                            Log.d(TAG, "onAdFailedToLoad: ## " + loadAdError);
+
                             ad = null;
                         }
 
                         @Override
                         public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                            Log.d(TAG, "onAdLoaded: ## ");
+                            Log.d(TAG, "onAdLoaded: ## " + interstitialAd.getAdUnitId() + "    " + interstitialAd.getResponseInfo().getResponseId());
+
                             ad = interstitialAd;
+
+                            Log.d(TAG, "onCreate: ## before setFullScreenContentCallback()");
+                            Log.d(TAG, "onCreate: ## is ad is null: " + (ad == null));
+
+                            ad.setFullScreenContentCallback(new FullScreenContentCallback() {
+                                @Override
+                                public void onAdClicked() {
+                                    super.onAdClicked();
+                                }
+
+                                public void onAdDismissedFullScreenContent() {
+                                    // Called when fullscreen content is dismissed.
+                                    startQuiz();
+                                }
+
+                                @Override
+                                public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                    // Called when fullscreen content failed to show.
+                                }
+
+                                @Override
+                                public void onAdShowedFullScreenContent() {
+                                    // Called when fullscreen content is shown.
+                                    // Make sure to set your reference to null so you don't
+                                    // show it a second time.
+                                    ad = null;
+                                }
+                            });
                         }
                     });
+
         } else {
             count++;
             sharedPrefs.edit().putInt(INTERSTITIAL_NOC, count).apply();

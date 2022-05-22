@@ -232,30 +232,7 @@ public class ScoreActivity extends AppCompatActivity {
         if (count >= 2) {
             count = 0;
             sharedPrefs.edit().putInt(INTERSTITIAL_NOS, count).apply();
-            ad.setFullScreenContentCallback(new FullScreenContentCallback() {
-                @Override
-                public void onAdClicked() {
-                    super.onAdClicked();
-                }
 
-                public void onAdDismissedFullScreenContent() {
-                    // Called when fullscreen content is dismissed.
-                    playAgain();
-                }
-
-                @Override
-                public void onAdFailedToShowFullScreenContent(AdError adError) {
-                    // Called when fullscreen content failed to show.
-                }
-
-                @Override
-                public void onAdShowedFullScreenContent() {
-                    // Called when fullscreen content is shown.
-                    // Make sure to set your reference to null so you don't
-                    // show it a second time.
-                    ad = null;
-                }
-            });
             InterstitialAd.load(this, INTERSTITIAL, getAdRequest(eea),
                     new InterstitialAdLoadCallback() {
                         @Override
@@ -266,6 +243,31 @@ public class ScoreActivity extends AppCompatActivity {
                         @Override
                         public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                             ad = interstitialAd;
+
+                            ad.setFullScreenContentCallback(new FullScreenContentCallback() {
+                                @Override
+                                public void onAdClicked() {
+                                    super.onAdClicked();
+                                }
+
+                                public void onAdDismissedFullScreenContent() {
+                                    // Called when fullscreen content is dismissed.
+                                    playAgain();
+                                }
+
+                                @Override
+                                public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                    // Called when fullscreen content failed to show.
+                                }
+
+                                @Override
+                                public void onAdShowedFullScreenContent() {
+                                    // Called when fullscreen content is shown.
+                                    // Make sure to set your reference to null so you don't
+                                    // show it a second time.
+                                    ad = null;
+                                }
+                            });
                         }
                     });
         } else {
